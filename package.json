@@ -1,0 +1,30 @@
+{
+  "name": "base-config-app",
+  "version": "1.0.0",
+  "description": "",
+  "repository": "dword-design/base-config-app",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@dword-design.de>",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "commit": "base commit",
+    "dev": "base dev",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "dependencies": {
+    "@dword-design/base-config-nuxt": "^2.8.0",
+    "@dword-design/semantic-release-vserver": "^1.0.1",
+    "get-package-name": "^1.1.0"
+  },
+  "devDependencies": {
+    "@dword-design/base": "^6.10.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
