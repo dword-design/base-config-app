@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dword-design/base-config-app/compare/v1.0.1...v1.1.0) (2020-05-28)
+
+
+### Features
+
+* add deploy env ([a303182](https://github.com/dword-design/base-config-app/commit/a3031825d0bd067c2273b52fd43df3e8acb439c6))
+
 ## [1.0.1](https://github.com/dword-design/base-config-app/compare/v1.0.0...v1.0.1) (2020-05-28)
 
 
