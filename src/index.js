@@ -4,6 +4,7 @@ import getPackageName from 'get-package-name'
 export default {
   ...nuxtConfig,
   npmPublish: false,
+  useJobMatrix: false,
   deployPlugins: [
     getPackageName(require.resolve('@dword-design/semantic-release-vserver')),
   ],
