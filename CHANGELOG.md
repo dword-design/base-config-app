@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/dword-design/base-config-app/compare/v1.2.0...v1.2.1) (2020-05-29)
+
+
+### Bug Fixes
+
+* upgrade vserver plugin ([5181375](https://github.com/dword-design/base-config-app/commit/51813757886000ca476d98554334b221e78a5532))
+
 # [1.2.0](https://github.com/dword-design/base-config-app/compare/v1.1.0...v1.2.0) (2020-05-29)
 
 
