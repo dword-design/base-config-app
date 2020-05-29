@@ -1145,10 +1145,20 @@
   dependencies:
     "@dword-design/functions" "^1.1.0"
 
-"@dword-design/semantic-release-vserver@^1.0.0", "@dword-design/semantic-release-vserver@^1.0.1":
+"@dword-design/semantic-release-vserver@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@dword-design/semantic-release-vserver/-/semantic-release-vserver-1.0.1.tgz#9a107ea9f462d229d6898c77a7f6267ed1d9eded"
   integrity sha512-5K4SpCPwZBgBejYMAtm5mdynZMu+HFEjzjjKgVOdKtvilCDX8BrC4k5RfmYuZPIdNYKnoeOCzq4lHoC7A1ss5w==
+  dependencies:
+    "@dword-design/functions" "^1.1.1"
+    "@eclass/semantic-release-ssh-commands" "^1.0.1"
+    parse-pkg-name "^2.0.0"
+    read-pkg-up "^7.0.1"
+
+"@dword-design/semantic-release-vserver@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/semantic-release-vserver/-/semantic-release-vserver-1.1.0.tgz#25f9987969ff481235d69796aff3ca09ef276392"
+  integrity sha512-+Agz7hJMscOqEp2TJkgi0lX3twMEve0bwvmbABe+Ni4SPcpWkkNiqwCIhYL3UZzMIhP87absNzQQVf23A08K4A==
   dependencies:
     "@dword-design/functions" "^1.1.1"
     "@eclass/semantic-release-ssh-commands" "^1.0.1"
@@ -5285,7 +5295,7 @@ expect@^25.1.0:
     jest-message-util "^25.5.0"
     jest-regex-util "^25.2.6"
 
-"express-mount-files@github:dword-design/express-mount-files#fork":
+express-mount-files@dword-design/express-mount-files#fork:
   version "0.1.1"
   resolved "https://codeload.github.com/dword-design/express-mount-files/tar.gz/c9778e91443c9a3824a01298dc5090a3b53db8df"
   dependencies:
@@ -9274,7 +9284,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-"nuxt-i18n@github:dword-design/nuxt-i18n#fork":
+nuxt-i18n@dword-design/nuxt-i18n#fork:
   version "6.11.0"
   resolved "https://codeload.github.com/dword-design/nuxt-i18n/tar.gz/eb249de4aa692a1883b8f22237855d3c515a234b"
   dependencies:
@@ -11761,7 +11771,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-safe-require@dword-design/node-safe-require#fork, "safe-require@github:dword-design/node-safe-require#fork":
+safe-require@dword-design/node-safe-require#fork:
   version "1.0.3"
   resolved "https://codeload.github.com/dword-design/node-safe-require/tar.gz/53682cf7aa25d784c6278f8ccbc9986ad0dd5f38"
 
