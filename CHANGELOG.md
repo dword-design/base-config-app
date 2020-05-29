@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dword-design/base-config-app/compare/v1.1.0...v1.2.0) (2020-05-29)
+
+
+### Features
+
+* deactivate job matrix ([5a90936](https://github.com/dword-design/base-config-app/commit/5a909367629c59700272276d1f259682843c4dc8))
+
 # [1.1.0](https://github.com/dword-design/base-config-app/compare/v1.0.1...v1.1.0) (2020-05-28)
 
 
