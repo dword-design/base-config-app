@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/dword-design/base-config-app/compare/v1.2.1...v1.2.2) (2020-06-13)
+
+
+### Bug Fixes
+
+* build files ([04a46ef](https://github.com/dword-design/base-config-app/commit/04a46ef4551044a491b8f953f05985aaa0f3d7e7))
+* do not deploy if private ([cd2bd09](https://github.com/dword-design/base-config-app/commit/cd2bd0921b152ac942bbc040423693ba3cc3ec48))
+
 ## [1.2.1](https://github.com/dword-design/base-config-app/compare/v1.2.0...v1.2.1) (2020-05-29)
 
 
