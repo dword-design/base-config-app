@@ -19,7 +19,8 @@
   "dependencies": {
     "@dword-design/base-config-nuxt": "^2.8.0",
     "@dword-design/semantic-release-vserver": "^1.1.0",
-    "get-package-name": "^1.1.0"
+    "get-package-name": "^1.1.0",
+    "load-pkg": "^4.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^6.10.2"
