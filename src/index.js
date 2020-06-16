@@ -6,6 +6,11 @@ const packageConfig = loadPkg.sync()
 
 export default {
   ...nuxtConfig,
+  packageConfig: {
+    main: 'dist/index.js',
+    private: true,
+    workspaces: ['modules/*'],
+  },
   npmPublish: false,
   useJobMatrix: false,
   ...(!packageConfig.private && {
