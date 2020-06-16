@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/dword-design/base-config-app/compare/v1.2.2...v1.3.0) (2020-06-16)
+
+
+### Features
+
+* add workspace config ([7ef414c](https://github.com/dword-design/base-config-app/commit/7ef414c5b20473fea8e678dd6da8fd7206757b16))
+
 ## [1.2.2](https://github.com/dword-design/base-config-app/compare/v1.2.1...v1.2.2) (2020-06-13)
 
 
