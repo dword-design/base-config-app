@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/dword-design/base-config-app/compare/v1.3.0...v1.3.1) (2020-06-17)
+
+
+### Bug Fixes
+
+* remove workspaces ([5d0cde5](https://github.com/dword-design/base-config-app/commit/5d0cde5a141654f75b54d78988ce6bc2fd698bca))
+
 # [1.3.0](https://github.com/dword-design/base-config-app/compare/v1.2.2...v1.3.0) (2020-06-16)
 
 
