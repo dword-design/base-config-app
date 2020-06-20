@@ -19,7 +19,10 @@
   },
   "dependencies": {
     "@dword-design/base-config-nuxt": "^2.8.0",
+    "@dword-design/depcheck-special-ceiling": "^1.0.0",
     "@dword-design/semantic-release-vserver": "^1.1.0",
+    "ceiling": "^2.2.4",
+    "execa": "^4.0.2",
     "get-package-name": "^1.1.0",
     "load-pkg": "^4.0.0"
   },
