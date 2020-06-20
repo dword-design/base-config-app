@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/dword-design/base-config-app/compare/v1.3.1...v1.4.0) (2020-06-20)
+
+
+### Features
+
+* add ceiling ([ac08545](https://github.com/dword-design/base-config-app/commit/ac085452ff963c8ed92c45d5ef9f89b79e0904fc))
+
 ## [1.3.1](https://github.com/dword-design/base-config-app/compare/v1.3.0...v1.3.1) (2020-06-17)
 
 
