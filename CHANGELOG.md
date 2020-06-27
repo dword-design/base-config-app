@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/dword-design/base-config-app/compare/v1.4.0...v1.4.1) (2020-06-27)
+
+
+### Bug Fixes
+
+* remove ceiling depcheck special ([1827d3e](https://github.com/dword-design/base-config-app/commit/1827d3edb9e6222c3c38c1053d01ee7449375a27))
+
 # [1.4.0](https://github.com/dword-design/base-config-app/compare/v1.3.1...v1.4.0) (2020-06-20)
 
 
