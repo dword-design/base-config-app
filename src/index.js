@@ -1,5 +1,4 @@
 import nuxtConfig from '@dword-design/base-config-nuxt'
-import depcheckCeilingSpecial from '@dword-design/depcheck-special-ceiling'
 import execa from 'execa'
 import getPackageName from 'get-package-name'
 import loadPkg from 'load-pkg'
@@ -8,10 +7,6 @@ const packageConfig = loadPkg.sync()
 
 export default {
   ...nuxtConfig,
-  depcheckConfig: {
-    ...nuxtConfig.depcheckConfig,
-    specials: [...nuxtConfig.depcheckConfig.specials, depcheckCeilingSpecial],
-  },
   allowedMatches: [...nuxtConfig.allowedMatches, '.ceilingrc.json'],
   gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json'],
   packageConfig: {
