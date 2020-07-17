@@ -14,6 +14,7 @@ export default {
     await nuxtConfig.prepare()
     return outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2))
   },
+  editorIgnore: [...nuxtConfig.editorIgnore, 'ecosystem.json'],
   gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json', '/ecosystem.json'],
   packageConfig: {
     main: 'dist/index.js',
