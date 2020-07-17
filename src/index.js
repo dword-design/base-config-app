@@ -36,10 +36,14 @@ export default {
         },
       ],
     ],
-    deployEnv: {
-      SSH_USER: '${{ secrets.SSH_USER }}',
-      SSH_PRIVATE_KEY: '${{ secrets.SSH_PRIVATE_KEY }}',
-    },
+    preDeploySteps: [
+      {
+        uses: 'webfactory/ssh-agent@v0.4.0',
+        with: {
+          'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}',
+        },
+      },
+    ],
   }),
   commands: {
     ...nuxtConfig.commands,

@@ -1,17 +1,21 @@
 import { existsSync } from 'fs-extra'
+import loadPkg from 'load-pkg'
 import parseGitConfig from 'parse-git-config'
+import parsePkgName from 'parse-pkg-name'
 
 const repositoryUrl = existsSync('.git')
   ? parseGitConfig.sync()['remote "origin"']?.url
   : undefined
+const packageConfig = loadPkg.sync()
+const packageName = parsePkgName(packageConfig.name).name
 
 export default {
   apps: [
     {
-      name: 'test-pm2-deploy',
+      name: packageName,
       exec_mode: 'cluster',
       instances: 'max',
-      script: './node_modules/nuxt/bin/nuxt.js',
+      script: 'npm',
       args: 'start',
     },
   ],
@@ -19,7 +23,7 @@ export default {
     production: {
       user: 'root',
       host: ['dword-design.de'],
-      path: '/var/www/test-pm2-deploy',
+      path: `/var/www/${packageName}`,
       ...(repositoryUrl && { repo: repositoryUrl }),
       ref: 'origin/master',
       'post-deploy':
