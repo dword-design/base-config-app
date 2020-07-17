@@ -10,7 +10,7 @@ export default {
   ...nuxtConfig,
   prepare: async () => {
     await nuxtConfig.prepare()
-    return copyFile(require.resolve('./ecosystem.json'), 'ecosystem.json')
+    return copyFile(require.resolve('./ecosystem'), 'ecosystem.json')
   },
   allowedMatches: [
     ...nuxtConfig.allowedMatches,
