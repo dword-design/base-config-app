@@ -1,8 +1,10 @@
 import nuxtConfig from '@dword-design/base-config-nuxt'
 import execa from 'execa'
-import { copyFile } from 'fs-extra'
+import { outputFile } from 'fs-extra'
 import getPackageName from 'get-package-name'
 import loadPkg from 'load-pkg'
+
+import ecosystem from './ecosystem'
 
 const packageConfig = loadPkg.sync()
 
@@ -10,7 +12,7 @@ export default {
   ...nuxtConfig,
   prepare: async () => {
     await nuxtConfig.prepare()
-    return copyFile(require.resolve('./ecosystem'), 'ecosystem.json')
+    return outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2))
   },
   allowedMatches: [
     ...nuxtConfig.allowedMatches,
