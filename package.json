@@ -25,6 +25,7 @@
     "fs-extra": "^9.0.1",
     "get-package-name": "^1.1.0",
     "load-pkg": "^4.0.0",
+    "parse-git-config": "^3.0.0",
     "pm2": "^4.4.0"
   },
   "devDependencies": {

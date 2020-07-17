@@ -1,6 +1,6 @@
 import nuxtConfig from '@dword-design/base-config-nuxt'
 import execa from 'execa'
-import { copy } from 'fs-extra'
+import { copyFile } from 'fs-extra'
 import getPackageName from 'get-package-name'
 import loadPkg from 'load-pkg'
 
@@ -10,7 +10,7 @@ export default {
   ...nuxtConfig,
   prepare: async () => {
     await nuxtConfig.prepare()
-    return copy(require.resolve('ecosystem.json'), '.')
+    return copyFile(require.resolve('./ecosystem.json'), 'ecosystem.json')
   },
   allowedMatches: [
     ...nuxtConfig.allowedMatches,
@@ -41,6 +41,10 @@ export default {
   }),
   commands: {
     ...nuxtConfig.commands,
+    setupDeploy: {
+      handler: () =>
+        execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
+    },
     pull: {
       arguments: '<endpoint>',
       handler: endpoint =>
