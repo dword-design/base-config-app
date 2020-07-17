@@ -27,7 +27,7 @@ export default {
       ...(repositoryUrl && { repo: repositoryUrl }),
       ref: 'origin/master',
       'post-deploy':
-        'source ~/.nvm/nvm.sh && yarn --frozen-lockfile && yarn build && pm2 startOrReload ecosystem.json',
+        'source ~/.nvm/nvm.sh && yarn --frozen-lockfile && yarn prepublishOnly && pm2 startOrReload ecosystem.json',
     },
   },
 }
