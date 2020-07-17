@@ -28,7 +28,7 @@ export default {
         {
           publishCmd: `${getPackageName(
             require.resolve('pm2')
-          )} deploy production`,
+          )} deploy production --force`,
         },
       ],
     ],
@@ -39,6 +39,7 @@ export default {
           'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}',
         },
       },
+      { run: 'ssh-keyscan dword-design.de >> ~/.ssh/known_hosts' },
     ],
   }),
   commands: {
