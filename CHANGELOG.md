@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/dword-design/base-config-app/compare/v1.4.1...v1.5.0) (2020-07-17)
+
+
+### Features
+
+* use pm2 for deployment ([0aed2cf](https://github.com/dword-design/base-config-app/commit/0aed2cf5c7b5cfd25cbb32fd463e2091498a79de))
+
 ## [1.4.1](https://github.com/dword-design/base-config-app/compare/v1.4.0...v1.4.1) (2020-06-27)
 
 
