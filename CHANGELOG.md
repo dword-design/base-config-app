@@ -1,3 +1,10 @@
+## [1.5.7](https://github.com/dword-design/base-config-app/compare/v1.5.6...v1.5.7) (2020-07-17)
+
+
+### Bug Fixes
+
+* fix pm2 github deploy ([dd610e7](https://github.com/dword-design/base-config-app/commit/dd610e7fd3489c4eae556044bca500fdbbd55df9))
+
 ## [1.5.6](https://github.com/dword-design/base-config-app/compare/v1.5.5...v1.5.6) (2020-07-17)
 
 
