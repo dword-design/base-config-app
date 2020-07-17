@@ -19,11 +19,13 @@
   },
   "dependencies": {
     "@dword-design/base-config-nuxt": "^2.8.0",
-    "@dword-design/semantic-release-vserver": "^1.1.0",
+    "@semantic-release/exec": "^5.0.0",
     "ceiling": "^2.2.4",
     "execa": "^4.0.2",
+    "fs-extra": "^9.0.1",
     "get-package-name": "^1.1.0",
-    "load-pkg": "^4.0.0"
+    "load-pkg": "^4.0.0",
+    "pm2": "^4.4.0"
   },
   "devDependencies": {
     "@dword-design/base": "^6.10.2"
