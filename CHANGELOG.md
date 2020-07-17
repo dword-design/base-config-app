@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/dword-design/base-config-app/compare/v1.5.2...v1.5.3) (2020-07-17)
+
+
+### Bug Fixes
+
+* fixes ([3abf36e](https://github.com/dword-design/base-config-app/commit/3abf36ea8070f6f2a3cf8fc93c8914ab59faa595))
+
 ## [1.5.2](https://github.com/dword-design/base-config-app/compare/v1.5.1...v1.5.2) (2020-07-17)
 
 
