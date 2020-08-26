@@ -10,16 +10,16 @@ const packageConfig = loadPkg.sync()
 
 export default {
   ...nuxtConfig,
+  editorIgnore: [...nuxtConfig.editorIgnore, 'ecosystem.json'],
+  gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json', '/ecosystem.json'],
+  npmPublish: false,
+  packageConfig: {
+    main: 'dist/index.js',
+  },
   prepare: async () => {
     await nuxtConfig.prepare()
     return outputFile('ecosystem.json', JSON.stringify(ecosystem, undefined, 2))
   },
-  editorIgnore: [...nuxtConfig.editorIgnore, 'ecosystem.json'],
-  gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json', '/ecosystem.json'],
-  packageConfig: {
-    main: 'dist/index.js',
-  },
-  npmPublish: false,
   useJobMatrix: false,
   ...(!packageConfig.private && {
     deployPlugins: [
@@ -44,10 +44,6 @@ export default {
   }),
   commands: {
     ...nuxtConfig.commands,
-    setupDeploy: {
-      handler: () =>
-        execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
-    },
     pull: {
       arguments: '<endpoint>',
       handler: endpoint =>
@@ -57,6 +53,10 @@ export default {
       arguments: '<endpoint>',
       handler: endpoint =>
         execa.command(`ceiling push ${endpoint}`, { stdio: 'inherit' }),
+    },
+    setupDeploy: {
+      handler: () =>
+        execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
     },
   },
 }

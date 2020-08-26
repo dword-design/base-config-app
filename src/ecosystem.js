@@ -12,22 +12,22 @@ const packageName = parsePkgName(packageConfig.name).name
 export default {
   apps: [
     {
-      name: packageName,
+      args: 'start',
       exec_mode: 'cluster',
       instances: 'max',
+      name: packageName,
       script: 'npm',
-      args: 'start',
     },
   ],
   deploy: {
     production: {
-      user: 'root',
       host: ['dword-design.de'],
       path: `/var/www/${packageName}`,
+      user: 'root',
       ...(repositoryUrl && { repo: repositoryUrl }),
-      ref: 'origin/master',
       'post-deploy':
         'source ~/.nvm/nvm.sh && yarn --frozen-lockfile && yarn prepublishOnly && pm2 startOrReload ecosystem.json',
+      ref: 'origin/master',
     },
   },
 }
