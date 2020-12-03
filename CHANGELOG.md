@@ -1,3 +1,10 @@
+## [1.5.10](https://github.com/dword-design/base-config-app/compare/v1.5.9...v1.5.10) (2020-12-03)
+
+
+### Bug Fixes
+
+* upgrade webfactory/ssh-agent ([bd65664](https://github.com/dword-design/base-config-app/commit/bd65664e445a30a80f750830277e37637018af0c))
+
 ## [1.5.9](https://github.com/dword-design/base-config-app/compare/v1.5.8...v1.5.9) (2020-12-02)
 
 
