@@ -22,7 +22,7 @@
     "@dword-design/base-config-nuxt": "^2.8.0",
     "@semantic-release/exec": "^5.0.0",
     "ceiling": "^2.2.4",
-    "execa": "^4.0.2",
+    "execa": "^5.0.0",
     "fs-extra": "^9.0.1",
     "get-package-name": "^1.1.0",
     "load-pkg": "^4.0.0",
