@@ -1,3 +1,10 @@
+## [1.5.11](https://github.com/dword-design/base-config-app/compare/v1.5.10...v1.5.11) (2020-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([b48d18c](https://github.com/dword-design/base-config-app/commit/b48d18c438d1f42f2f76c6b52c9a9ceec1c4eff3))
+
 ## [1.5.10](https://github.com/dword-design/base-config-app/compare/v1.5.9...v1.5.10) (2020-12-03)
 
 
