@@ -1,7 +1,7 @@
 import nuxtConfig from '@dword-design/base-config-nuxt'
+import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import { outputFile } from 'fs-extra'
-import getPackageName from 'get-package-name'
 import loadPkg from 'load-pkg'
 
 import ecosystem from './ecosystem'
@@ -24,11 +24,9 @@ export default {
   ...(!packageConfig.private && {
     deployPlugins: [
       [
-        getPackageName(require.resolve('@semantic-release/exec')),
+        packageName`@semantic-release/exec`,
         {
-          publishCmd: `${getPackageName(
-            require.resolve('pm2')
-          )} deploy production --force`,
+          publishCmd: `${packageName`pm2`} deploy production --force`,
         },
       ],
     ],
