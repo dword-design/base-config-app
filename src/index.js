@@ -11,7 +11,7 @@ const packageConfig = loadPkg.sync()
 export default {
   ...nuxtConfig,
   editorIgnore: [...nuxtConfig.editorIgnore, 'ecosystem.json'],
-  gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json', '/ecosystem.json'],
+  gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json'],
   npmPublish: false,
   packageConfig: {
     main: 'dist/index.js',
