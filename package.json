@@ -25,13 +25,16 @@
     "depcheck-package-name": "^1.0.0",
     "execa": "^5.0.0",
     "fs-extra": "^9.0.1",
+    "hosted-git-info": "^3.0.8",
     "load-pkg": "^4.0.0",
     "parse-git-config": "^3.0.0",
     "parse-pkg-name": "^2.0.0",
     "pm2": "^4.4.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.0.0"
+    "@dword-design/base": "^7.0.0",
+    "@dword-design/proxyquire": "^1.0.4",
+    "with-local-tmp-dir": "^2.2.15"
   },
   "publishConfig": {
     "access": "public"
