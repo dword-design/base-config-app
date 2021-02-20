@@ -1,3 +1,10 @@
+## [1.5.15](https://github.com/dword-design/base-config-app/compare/v1.5.14...v1.5.15) (2021-02-20)
+
+
+### Bug Fixes
+
+* allow ecosystem.json ([d69bbf9](https://github.com/dword-design/base-config-app/commit/d69bbf9adc825126b646a923aef3879c6fb7d098))
+
 ## [1.5.14](https://github.com/dword-design/base-config-app/compare/v1.5.13...v1.5.14) (2021-02-20)
 
 
