@@ -10,6 +10,7 @@ const packageConfig = loadPkg.sync()
 
 export default {
   ...nuxtConfig,
+  allowedMatches: ['ecosystem.json'],
   editorIgnore: [...nuxtConfig.editorIgnore, 'ecosystem.json'],
   gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json'],
   npmPublish: false,
