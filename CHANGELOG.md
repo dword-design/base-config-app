@@ -1,3 +1,10 @@
+## [1.5.17](https://github.com/dword-design/base-config-app/compare/v1.5.16...v1.5.17) (2021-02-20)
+
+
+### Bug Fixes
+
+* always use ssh url for deployment ([#13](https://github.com/dword-design/base-config-app/issues/13)) ([f36bb49](https://github.com/dword-design/base-config-app/commit/f36bb49ad2c3c66e6528373add8502518b4e899a))
+
 ## [1.5.16](https://github.com/dword-design/base-config-app/compare/v1.5.15...v1.5.16) (2021-02-20)
 
 
