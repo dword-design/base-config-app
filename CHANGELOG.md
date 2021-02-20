@@ -1,3 +1,10 @@
+## [1.5.14](https://github.com/dword-design/base-config-app/compare/v1.5.13...v1.5.14) (2021-02-20)
+
+
+### Bug Fixes
+
+* fix ecosystem ram usage ([5db355c](https://github.com/dword-design/base-config-app/commit/5db355ca4b7fd514ce43c00eb1cbb49bf5ff76ee))
+
 ## [1.5.13](https://github.com/dword-design/base-config-app/compare/v1.5.12...v1.5.13) (2021-02-17)
 
 
