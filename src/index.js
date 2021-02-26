@@ -25,7 +25,11 @@ export default {
     'ecosystem.json',
     'nginx',
   ],
-  gitignore: [...nuxtConfig.gitignore, '/.ceilingrc.json', '/nginx/default.config'],
+  gitignore: [
+    ...nuxtConfig.gitignore,
+    '/.ceilingrc.json',
+    '/nginx/default.config',
+  ],
   npmPublish: false,
   packageConfig: {
     main: 'dist/index.js',
