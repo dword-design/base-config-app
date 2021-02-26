@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/dword-design/base-config-app/compare/v1.5.17...v1.6.0) (2021-02-26)
+
+
+### Features
+
+* add docker-compose ([166db18](https://github.com/dword-design/base-config-app/commit/166db186651c2cce08140e2a24b02cd01e1adbb6))
+
 ## [1.5.17](https://github.com/dword-design/base-config-app/compare/v1.5.16...v1.5.17) (2021-02-20)
 
 
