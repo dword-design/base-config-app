@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/dword-design/base-config-app/compare/v1.6.0...v1.6.1) (2021-02-26)
+
+
+### Bug Fixes
+
+* ignore nginx generated config ([3ff099f](https://github.com/dword-design/base-config-app/commit/3ff099f6b761777bf4c2efe5ca68d05721b17e17))
+
 # [1.6.0](https://github.com/dword-design/base-config-app/compare/v1.5.17...v1.6.0) (2021-02-26)
 
 
