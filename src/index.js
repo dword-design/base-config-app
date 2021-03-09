@@ -54,7 +54,7 @@ export default {
     ],
     preDeploySteps: [
       {
-        uses: 'webfactory/ssh-agent@v0.4.1',
+        uses: 'webfactory/ssh-agent@v0.5.0',
         with: {
           'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}',
         },
