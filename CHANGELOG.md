@@ -1,3 +1,10 @@
+## [1.6.4](https://github.com/dword-design/base-config-app/compare/v1.6.3...v1.6.4) (2021-03-17)
+
+
+### Bug Fixes
+
+* fix deployment memory ([cc838d6](https://github.com/dword-design/base-config-app/commit/cc838d649a9b600bc9ff3ce4d65c392f10ff84ab))
+
 ## [1.6.3](https://github.com/dword-design/base-config-app/compare/v1.6.2...v1.6.3) (2021-03-17)
 
 
