@@ -33,7 +33,7 @@ export default {
       ...(repositoryUrl && {
         repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
       }),
-      'post-deploy': `source ~/.nvm/nvm.sh && yarn --frozen-lockfile && node --max-old-space-size=512 ./node_modules/.bin/nuxt-babel build --config-file ${P.relative(
+      'post-deploy': `source ~/.nvm/nvm.sh && yarn --frozen-lockfile && node --max-old-space-size=400 ./node_modules/.bin/nuxt-babel build --config-file ${P.relative(
         process.cwd(),
         require.resolve('@dword-design/base-config-nuxt/dist/nuxt.config.js')
       )} && pm2 startOrReload ecosystem.json`,
