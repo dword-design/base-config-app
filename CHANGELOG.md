@@ -1,3 +1,10 @@
+## [1.6.6](https://github.com/dword-design/base-config-app/compare/v1.6.5...v1.6.6) (2021-03-22)
+
+
+### Bug Fixes
+
+* update dependency hosted-git-info to v4 ([#16](https://github.com/dword-design/base-config-app/issues/16)) ([139257a](https://github.com/dword-design/base-config-app/commit/139257a1829696a41226a4a114abb1868c150a93))
+
 ## [1.6.5](https://github.com/dword-design/base-config-app/compare/v1.6.4...v1.6.5) (2021-03-22)
 
 
