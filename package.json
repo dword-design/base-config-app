@@ -27,7 +27,7 @@
     "depcheck-package-name": "^1.0.0",
     "execa": "^5.0.0",
     "fs-extra": "^9.0.1",
-    "hosted-git-info": "^3.0.8",
+    "hosted-git-info": "^4.0.0",
     "load-pkg": "^4.0.0",
     "output-files": "^1.1.20",
     "parse-git-config": "^3.0.0",
