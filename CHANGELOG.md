@@ -1,3 +1,10 @@
+## [1.6.8](https://github.com/dword-design/base-config-app/compare/v1.6.7...v1.6.8) (2021-03-23)
+
+
+### Bug Fixes
+
+* upgrade ssh-agent ([#21](https://github.com/dword-design/base-config-app/issues/21)) ([9377839](https://github.com/dword-design/base-config-app/commit/937783992702c79564d77ed8d539a736498f04ac))
+
 ## [1.6.7](https://github.com/dword-design/base-config-app/compare/v1.6.6...v1.6.7) (2021-03-23)
 
 
