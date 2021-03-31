@@ -3,7 +3,6 @@ import hostedGitInfo from 'hosted-git-info'
 import loadPkg from 'load-pkg'
 import parseGitConfig from 'parse-git-config'
 import parsePkgName from 'parse-pkg-name'
-import P from 'path'
 
 const repositoryUrl = existsSync('.git')
   ? parseGitConfig.sync()['remote "origin"']?.url
@@ -36,10 +35,8 @@ export default {
       ...(repositoryUrl && {
         repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
       }),
-      'post-deploy': `source ~/.nvm/nvm.sh && yarn --frozen-lockfile && node --max-old-space-size=400 ./node_modules/.bin/nuxt-babel build --config-file ${P.relative(
-        process.cwd(),
-        require.resolve('@dword-design/base-config-nuxt/dist/nuxt.config.js')
-      )} && pm2 startOrReload ecosystem.json`,
+      'post-deploy':
+        'source ~/.nvm/nvm.sh && yarn --frozen-lockfile && yarn prepublishOnly && pm2 startOrReload ecosystem.json',
       ref: 'origin/master',
     },
   },
