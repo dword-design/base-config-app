@@ -3,6 +3,7 @@ import loadPkg from 'load-pkg'
 import parsePkgName from 'parse-pkg-name'
 
 const packageConfig = loadPkg.sync()
+
 const packageName = parsePkgName(packageConfig.name).name
 
 export default endent`

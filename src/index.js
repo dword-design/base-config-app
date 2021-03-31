@@ -36,6 +36,7 @@ export default {
   },
   prepare: async () => {
     await nuxtConfig.prepare()
+
     return outputFiles({
       'docker-compose.yml': yaml.stringify(dockerCompose),
       'ecosystem.json': JSON.stringify(ecosystem, undefined, 2),
