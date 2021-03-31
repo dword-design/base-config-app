@@ -8,11 +8,14 @@ import P from 'path'
 const repositoryUrl = existsSync('.git')
   ? parseGitConfig.sync()['remote "origin"']?.url
   : undefined
+
 const gitInfo = hostedGitInfo.fromUrl(repositoryUrl) || {}
 if (repositoryUrl !== undefined && gitInfo.type !== 'github') {
   throw new Error('Only GitHub repositories are supported.')
 }
+
 const packageConfig = loadPkg.sync()
+
 const packageName = parsePkgName(packageConfig.name).name
 
 export default {

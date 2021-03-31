@@ -11,6 +11,7 @@ export default {
       await execa.command(
         'git remote add origin https://github.com/dword-design/foo.git'
       )
+
       const self = proxyquire('./ecosystem', {})
       expect(self.deploy.production.repo).toEqual(
         'git@github.com:dword-design/foo.git'
@@ -23,6 +24,7 @@ export default {
       await execa.command(
         'git remote add origin git@github.com:dword-design/foo.git'
       )
+
       const self = proxyquire('./ecosystem', {})
       expect(self.deploy.production.repo).toEqual(
         'git@github.com:dword-design/foo.git'
