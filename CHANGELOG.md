@@ -1,3 +1,10 @@
+## [1.6.9](https://github.com/dword-design/base-config-app/compare/v1.6.8...v1.6.9) (2021-03-31)
+
+
+### Bug Fixes
+
+* reset ram restriction because we use swap space now ([#26](https://github.com/dword-design/base-config-app/issues/26)) ([a28a3c4](https://github.com/dword-design/base-config-app/commit/a28a3c41f9ea4a8ee4389f749a17a72364c66dfd))
+
 ## [1.6.8](https://github.com/dword-design/base-config-app/compare/v1.6.7...v1.6.8) (2021-03-23)
 
 
