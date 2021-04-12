@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/dword-design/base-config-app/compare/v1.6.10...v2.0.0) (2021-04-12)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base-config-nuxt to v3 ([#30](https://github.com/dword-design/base-config-app/issues/30)) ([b998855](https://github.com/dword-design/base-config-app/commit/b998855b6a5613decc8d508e7f8f7dba6a381a9c))
+
+
+### BREAKING CHANGES
+
+* Global components work without the .global filename postfix
+
 ## [1.6.10](https://github.com/dword-design/base-config-app/compare/v1.6.9...v1.6.10) (2021-04-12)
 
 
