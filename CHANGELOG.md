@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/dword-design/base-config-app/compare/v2.0.0...v2.0.1) (2021-04-12)
+
+
+### Bug Fixes
+
+* add nuxt config ([#31](https://github.com/dword-design/base-config-app/issues/31)) ([638b001](https://github.com/dword-design/base-config-app/commit/638b0012992296344c7587900dcc3940555827a8))
+
 # [2.0.0](https://github.com/dword-design/base-config-app/compare/v1.6.10...v2.0.0) (2021-04-12)
 
 
