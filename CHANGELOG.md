@@ -1,3 +1,10 @@
+## [1.6.10](https://github.com/dword-design/base-config-app/compare/v1.6.9...v1.6.10) (2021-04-12)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#29](https://github.com/dword-design/base-config-app/issues/29)) ([f4df134](https://github.com/dword-design/base-config-app/commit/f4df134d5f13a29d0433b7365386be75fab38cd7))
+
 ## [1.6.9](https://github.com/dword-design/base-config-app/compare/v1.6.8...v1.6.9) (2021-03-31)
 
 
