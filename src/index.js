@@ -1,4 +1,4 @@
-import nuxtConfig from '@dword-design/base-config-nuxt'
+import baseConfigNuxt from '@dword-design/base-config-nuxt'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import loadPkg from 'load-pkg'
@@ -12,21 +12,21 @@ import nginxConfig from './nginx-config'
 const packageConfig = loadPkg.sync()
 
 export default {
-  ...nuxtConfig,
+  ...baseConfigNuxt,
   allowedMatches: [
-    ...nuxtConfig.allowedMatches,
+    ...baseConfigNuxt.allowedMatches,
     'docker-compose.yml',
     'ecosystem.json',
     'nginx',
   ],
   editorIgnore: [
-    ...nuxtConfig.editorIgnore,
+    ...baseConfigNuxt.editorIgnore,
     'docker-compose.yml',
     'ecosystem.json',
     'nginx',
   ],
   gitignore: [
-    ...nuxtConfig.gitignore,
+    ...baseConfigNuxt.gitignore,
     '/.ceilingrc.json',
     '/nginx/default.config',
   ],
@@ -35,7 +35,7 @@ export default {
     main: 'dist/index.js',
   },
   prepare: async () => {
-    await nuxtConfig.prepare()
+    await baseConfigNuxt.prepare()
 
     return outputFiles({
       'docker-compose.yml': yaml.stringify(dockerCompose),
@@ -64,7 +64,7 @@ export default {
     ],
   }),
   commands: {
-    ...nuxtConfig.commands,
+    ...baseConfigNuxt.commands,
     pull: {
       arguments: '<endpoint>',
       handler: endpoint =>
