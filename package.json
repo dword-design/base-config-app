@@ -37,8 +37,11 @@
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.0",
-    "@dword-design/proxyquire": "^1.0.4",
-    "with-local-tmp-dir": "^2.2.15"
+    "@dword-design/proxyquire": "^1.0.10",
+    "@dword-design/puppeteer": "^3.0.4",
+    "nuxt": "^2.15.4",
+    "stealthy-require": "^1.1.1",
+    "with-local-tmp-dir": "^2.2.19"
   },
   "publishConfig": {
     "access": "public"
