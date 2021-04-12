@@ -1113,10 +1113,10 @@
     fs-extra "^9.0.0"
     micromatch "^4.0.2"
 
-"@dword-design/base-config-nuxt@^2.8.0":
-  version "2.21.3"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-2.21.3.tgz#f4e1e6e43a8f3930bf0301ee253f91fba5acbde6"
-  integrity sha512-VHHNmsrY7j6E/tf7c6tkl3zqVLkw6MzJEq9d9e3VuCSGy1WEWKweur01ykX+rTKzJCHVy6t2uaSv/JexC9nUqQ==
+"@dword-design/base-config-nuxt@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-3.0.0.tgz#7d9c8460650d4ea3706bb697a04e75be6731f611"
+  integrity sha512-7N7I+IA28R/l78wCpqGPVCFjDkJ4cFQ53gPCs6wbJcAnaLDYpi7RZiQZKSL/6e0XoWVuWFhSP86Xv2wB1hH0KQ==
   dependencies:
     "@babel/register" "^7.13.8"
     "@dword-design/depcheck-parser-sass" "^1.1.0"
@@ -1127,7 +1127,6 @@
     "@dword-design/stylelint-config" "^1.0.0"
     "@nuxtjs/axios" "^5.10.3"
     "@nuxtjs/eslint-module" "^3.0.0"
-    "@nuxtjs/global-components" "^0.6.1"
     "@nuxtjs/stylelint-module" "^4.0.0"
     body-parser "^1.19.0"
     depcheck-package-name "^1.0.0"
@@ -1144,6 +1143,7 @@
     nuxt-i18n "^6.20.6"
     nuxt-svg-loader "^1.2.0"
     output-files "^1.1.10"
+    promise-sequential "^1.1.1"
     raw-loader "^4.0.1"
     safe-require "github:dword-design/node-safe-require#fork"
     sass-loader "^10.0.0"
@@ -1885,14 +1885,6 @@
   dependencies:
     consola "^2.15.0"
     eslint-webpack-plugin "^2.4.1"
-
-"@nuxtjs/global-components@^0.6.1":
-  version "0.6.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/global-components/-/global-components-0.6.1.tgz#7328530cea320871b19d2db2c814db9362b14784"
-  integrity sha512-9aNDUeSP1HaDwBWveRjOlpEKLL2h7kIwJyeGnr7CflT9upFcm0BkLyjy7eM4oACkUemuOtAIKCOulsnbz2ci2w==
-  dependencies:
-    chokidar "^3.3.1"
-    globby "^11.0.0"
 
 "@nuxtjs/proxy@^2.1.0":
   version "2.1.0"
@@ -3897,7 +3889,7 @@ charm@~0.1.1:
   resolved "https://registry.yarnpkg.com/charm/-/charm-0.1.2.tgz#06c21eed1a1b06aeb67553cdc53e23274bac2296"
   integrity sha1-BsIe7RobBq62dVPNxT4jJ0usIpY=
 
-chokidar@3.5.1, chokidar@^3.3.1, chokidar@^3.4.0, chokidar@^3.4.1, chokidar@^3.5.1:
+chokidar@3.5.1, chokidar@^3.4.0, chokidar@^3.4.1, chokidar@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
   integrity sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==
