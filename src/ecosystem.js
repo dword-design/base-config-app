@@ -2,7 +2,7 @@ import { existsSync } from 'fs-extra'
 import hostedGitInfo from 'hosted-git-info'
 import loadPkg from 'load-pkg'
 import parseGitConfig from 'parse-git-config'
-import parsePkgName from 'parse-pkg-name'
+import parsePackagejsonName from 'parse-packagejson-name'
 
 const repositoryUrl = existsSync('.git')
   ? parseGitConfig.sync()['remote "origin"']?.url
@@ -15,7 +15,7 @@ if (repositoryUrl !== undefined && gitInfo.type !== 'github') {
 
 const packageConfig = loadPkg.sync()
 
-const packageName = parsePkgName(packageConfig.name).name
+const packageName = parsePackagejsonName(packageConfig.name).fullName
 
 export default {
   apps: [

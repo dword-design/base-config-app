@@ -31,7 +31,7 @@
     "load-pkg": "^4.0.0",
     "output-files": "^1.1.20",
     "parse-git-config": "^3.0.0",
-    "parse-pkg-name": "^2.0.0",
+    "parse-packagejson-name": "^1.0.1",
     "pm2": "^4.4.0",
     "yaml": "^1.10.0"
   },

@@ -1,10 +1,10 @@
 import { endent } from '@dword-design/functions'
 import loadPkg from 'load-pkg'
-import parsePkgName from 'parse-pkg-name'
+import parsePackagejsonName from 'parse-packagejson-name'
 
 const packageConfig = loadPkg.sync()
 
-const packageName = parsePkgName(packageConfig.name).name
+const packageName = parsePackagejsonName(packageConfig.name).fullName
 
 export default endent`
   upstream web {
