@@ -1,3 +1,11 @@
+## [2.0.4](https://github.com/dword-design/base-config-app/compare/v2.0.3...v2.0.4) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/puppeteer to v4 ([#44](https://github.com/dword-design/base-config-app/issues/44)) ([dcba659](https://github.com/dword-design/base-config-app/commit/dcba6599d21806020ebff5a0b4b5748eded4b918))
+* update dependency with-local-tmp-dir to v3 ([#39](https://github.com/dword-design/base-config-app/issues/39)) ([b74fe99](https://github.com/dword-design/base-config-app/commit/b74fe99780b21bfcf3ff1e6c30ac8f784b9e5b8e))
+
 ## [2.0.3](https://github.com/dword-design/base-config-app/compare/v2.0.2...v2.0.3) (2021-04-22)
 
 
