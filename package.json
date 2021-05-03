@@ -42,6 +42,9 @@
     "stealthy-require": "^1.1.1",
     "with-local-tmp-dir": "^3.0.0"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "publishConfig": {
     "access": "public"
   }
