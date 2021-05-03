@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/dword-design/base-config-app/compare/v2.0.5...v2.0.6) (2021-05-03)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v8 ([#46](https://github.com/dword-design/base-config-app/issues/46)) ([2ac2912](https://github.com/dword-design/base-config-app/commit/2ac2912d5bfc1cc7b52759d5f7d8e075f51115a2))
+
 ## [2.0.5](https://github.com/dword-design/base-config-app/compare/v2.0.4...v2.0.5) (2021-04-28)
 
 
