@@ -35,12 +35,15 @@
     "yaml": "^1.10.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^7.0.0",
+    "@dword-design/base": "^8.0.0",
     "@dword-design/proxyquire": "^1.0.10",
     "@dword-design/puppeteer": "^4.0.0",
     "nuxt": "^2.15.4",
     "stealthy-require": "^1.1.1",
     "with-local-tmp-dir": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
