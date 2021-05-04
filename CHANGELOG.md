@@ -1,3 +1,15 @@
+## [2.0.7](https://github.com/dword-design/base-config-app/compare/v2.0.6...v2.0.7) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#47](https://github.com/dword-design/base-config-app/issues/47)) ([43808b8](https://github.com/dword-design/base-config-app/commit/43808b87b3a2079899343e2561204307c33dab4c))
+* update dependency @dword-design/puppeteer to v5 ([#49](https://github.com/dword-design/base-config-app/issues/49)) ([566d815](https://github.com/dword-design/base-config-app/commit/566d815ae1418575c47e33ff2a89983efce10391))
+* update dependency depcheck-package-name to v2 ([#51](https://github.com/dword-design/base-config-app/issues/51)) ([4e0576e](https://github.com/dword-design/base-config-app/commit/4e0576eab090eebc20e4e0df08533f18fec314f3))
+* update dependency fs-extra to v10 ([#52](https://github.com/dword-design/base-config-app/issues/52)) ([4952505](https://github.com/dword-design/base-config-app/commit/49525058828f2535bebcf64781d96108bad0b0ea))
+* update dependency output-files to v2 ([#53](https://github.com/dword-design/base-config-app/issues/53)) ([7ac700e](https://github.com/dword-design/base-config-app/commit/7ac700ec5ac069a3f101e714735a558d22a9ab41))
+* update dependency with-local-tmp-dir to v4 ([#54](https://github.com/dword-design/base-config-app/issues/54)) ([a4ac2ca](https://github.com/dword-design/base-config-app/commit/a4ac2caea3bae4bc2de8dafe2660b14f33972b0e))
+
 ## [2.0.6](https://github.com/dword-design/base-config-app/compare/v2.0.5...v2.0.6) (2021-05-03)
 
 
