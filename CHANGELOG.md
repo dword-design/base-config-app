@@ -1,3 +1,11 @@
+## [2.0.8](https://github.com/dword-design/base-config-app/compare/v2.0.7...v2.0.8) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/proxyquire to v2 ([#48](https://github.com/dword-design/base-config-app/issues/48)) ([045b28c](https://github.com/dword-design/base-config-app/commit/045b28c276e17aa4e5badfa02aadff18e4d642fc))
+* update dependency ceiling to v3 ([#50](https://github.com/dword-design/base-config-app/issues/50)) ([9725fef](https://github.com/dword-design/base-config-app/commit/9725fef0fb92344f721d197c18c3f77941050cea))
+
 ## [2.0.7](https://github.com/dword-design/base-config-app/compare/v2.0.6...v2.0.7) (2021-05-04)
 
 
