@@ -13,6 +13,7 @@ const packageConfig = loadPkg.sync()
 
 export default {
   ...baseConfigNuxt,
+  isLockFileFixCommitType: true,
   allowedMatches: [
     ...baseConfigNuxt.allowedMatches,
     'docker-compose.yml',
