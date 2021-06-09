@@ -13,7 +13,6 @@ const packageConfig = loadPkg.sync()
 
 export default {
   ...baseConfigNuxt,
-  isLockFileFixCommitType: true,
   allowedMatches: [
     ...baseConfigNuxt.allowedMatches,
     'docker-compose.yml',
@@ -31,6 +30,7 @@ export default {
     '/.ceilingrc.json',
     '/nginx/default.config',
   ],
+  isLockFileFixCommitType: true,
   npmPublish: false,
   packageConfig: {
     main: 'dist/index.js',
