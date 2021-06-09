@@ -1,3 +1,10 @@
+## [2.0.10](https://github.com/dword-design/base-config-app/compare/v2.0.9...v2.0.10) (2021-06-09)
+
+
+### Bug Fixes
+
+* make lock file fix commit type ([c6943cb](https://github.com/dword-design/base-config-app/commit/c6943cbe5282450144728eaba92f8e26153562d2))
+
 ## [2.0.9](https://github.com/dword-design/base-config-app/compare/v2.0.8...v2.0.9) (2021-05-28)
 
 
