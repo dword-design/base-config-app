@@ -2,7 +2,7 @@ import { endent, mapValues, noop } from '@dword-design/functions'
 import puppeteer from '@dword-design/puppeteer'
 import { Builder, Nuxt } from 'nuxt'
 import outputFiles from 'output-files'
-import stealthyRequire from 'stealthy-require'
+import stealthyRequire from 'stealthy-require-no-leak'
 import withLocalTmpDir from 'with-local-tmp-dir'
 
 let browser
