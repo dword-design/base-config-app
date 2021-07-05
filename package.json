@@ -2,7 +2,7 @@
   "name": "@dword-design/base-config-app",
   "version": "2.0.11",
   "repository": "dword-design/base-config-app",
-  "funding": "https://www.buymeacoffee.com/dword",
+  "funding": "https://github.com/sponsors/dword-design",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
   "main": "dist/index.js",
