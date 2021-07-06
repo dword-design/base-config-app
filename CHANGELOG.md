@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/dword-design/base-config-app/compare/v2.0.11...v2.0.12) (2021-07-06)
+
+
+### Bug Fixes
+
+* update config files ([69378bb](https://github.com/dword-design/base-config-app/commit/69378bb8e5906a252e150bda7ee2797e19b9ece4))
+
 ## [2.0.11](https://github.com/dword-design/base-config-app/compare/v2.0.10...v2.0.11) (2021-06-14)
 
 
