@@ -29,7 +29,7 @@ export default {
   ],
   deploy: {
     production: {
-      host: ['dword-design.de'],
+      host: ['sebastianlandwehr.com'],
       path: `/var/www/${packageName}`,
       user: 'root',
       ...(repositoryUrl && {
