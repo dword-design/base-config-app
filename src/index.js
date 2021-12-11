@@ -61,7 +61,7 @@ export default {
           'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}',
         },
       },
-      { run: 'ssh-keyscan dword-design.de >> ~/.ssh/known_hosts' },
+      { run: 'ssh-keyscan sebastianlandwehr.com >> ~/.ssh/known_hosts' },
     ],
   }),
   commands: {
