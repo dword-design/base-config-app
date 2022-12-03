@@ -5,9 +5,9 @@ import loadPkg from 'load-pkg'
 import outputFiles from 'output-files'
 import yaml from 'yaml'
 
-import dockerCompose from './docker-compose'
-import ecosystem from './ecosystem'
-import nginxConfig from './nginx-config'
+import dockerCompose from './docker-compose.js'
+import getEcosystemConfig from './get-ecosystem-confg.js'
+import nginxConfig from './nginx-config.js'
 
 const packageConfig = loadPkg.sync()
 
@@ -40,7 +40,7 @@ export default {
 
     return outputFiles({
       'docker-compose.yml': yaml.stringify(dockerCompose),
-      'ecosystem.json': JSON.stringify(ecosystem, undefined, 2),
+      'ecosystem.json': JSON.stringify(getEcosystemConfig(), undefined, 2),
       'nginx/default.config': JSON.stringify(nginxConfig, undefined, 2),
     })
   },
