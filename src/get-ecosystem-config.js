@@ -1,11 +1,11 @@
-import { existsSync } from 'fs-extra'
+import fs from 'fs-extra'
 import hostedGitInfo from 'hosted-git-info'
 import loadPkg from 'load-pkg'
 import parseGitConfig from 'parse-git-config'
 import parsePackagejsonName from 'parse-packagejson-name'
 
 export default () => {
-  const repositoryUrl = existsSync('.git')
+  const repositoryUrl = fs.existsSync('.git')
     ? parseGitConfig.sync()['remote "origin"']?.url
     : undefined
 
@@ -17,6 +17,7 @@ export default () => {
   const packageConfig = loadPkg.sync()
 
   const packageName = parsePackagejsonName(packageConfig.name).fullName
+
   return {
     apps: [
       {
