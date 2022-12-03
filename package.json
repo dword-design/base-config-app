@@ -43,8 +43,7 @@
     "@dword-design/tester-plugin-puppeteer": "^2.1.19",
     "@dword-design/tester-plugin-tmp-dir": "^2.1.3",
     "port-ready": "^0.1.0",
-    "tree-kill-promise": "^2.0.6",
-    "with-local-tmp-dir": "^4.0.0"
+    "tree-kill-promise": "^2.0.6"
   },
   "engines": {
     "node": ">=14"

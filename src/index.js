@@ -6,7 +6,7 @@ import outputFiles from 'output-files'
 import yaml from 'yaml'
 
 import dockerCompose from './docker-compose.js'
-import getEcosystemConfig from './get-ecosystem-confg.js'
+import getEcosystemConfig from './get-ecosystem-config.js'
 import nginxConfig from './nginx-config.js'
 
 const packageConfig = loadPkg.sync()
