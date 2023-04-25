@@ -35,7 +35,7 @@
     "parse-git-config": "^3.0.0",
     "parse-packagejson-name": "^1.0.1",
     "pm2": "^4.4.0",
-    "yaml": "^1.10.0"
+    "yaml": "^2.0.0"
   },
   "devDependencies": {
     "@dword-design/base": "^9.1.4",
