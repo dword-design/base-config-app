@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/dword-design/base-config-app/compare/v2.0.18...v3.0.0) (2023-05-19)
+
+
+### Bug Fixes
+
+* update dependency execa to v7 ([#124](https://github.com/dword-design/base-config-app/issues/124)) ([2b33b38](https://github.com/dword-design/base-config-app/commit/2b33b38af48eb85f0a440b5d18c2a419ac4411b5))
+
+
+### BREAKING CHANGES
+
+* Nuxt 3, drop Node 14 support
+
 ## [2.0.18](https://github.com/dword-design/base-config-app/compare/v2.0.17...v2.0.18) (2023-02-15)
 
 
