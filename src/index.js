@@ -1,6 +1,6 @@
 import baseConfigNuxt from '@dword-design/base-config-nuxt'
 import packageName from 'depcheck-package-name'
-import execa from 'execa'
+import { execaCommand } from 'execa'
 import loadPkg from 'load-pkg'
 import outputFiles from 'output-files'
 import yaml from 'yaml'
@@ -69,16 +69,16 @@ export default {
     pull: {
       arguments: '<endpoint>',
       handler: endpoint =>
-        execa.command(`ceiling pull ${endpoint}`, { stdio: 'inherit' }),
+        execaCommand(`ceiling pull ${endpoint}`, { stdio: 'inherit' }),
     },
     push: {
       arguments: '<endpoint>',
       handler: endpoint =>
-        execa.command(`ceiling push ${endpoint}`, { stdio: 'inherit' }),
+        execaCommand(`ceiling push ${endpoint}`, { stdio: 'inherit' }),
     },
     setupDeploy: {
       handler: () =>
-        execa.command('pm2 deploy production setup', { stdio: 'inherit' }),
+        execaCommand('pm2 deploy production setup', { stdio: 'inherit' }),
     },
   },
 }

@@ -2,7 +2,7 @@ import { endent, noop } from '@dword-design/functions'
 import tester from '@dword-design/tester'
 import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer'
 import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import execa from 'execa'
+import { execaCommand } from 'execa'
 import outputFiles from 'output-files'
 import portReady from 'port-ready'
 import kill from 'tree-kill-promise'
@@ -12,11 +12,11 @@ export default tester(
     dev: {
       files: {
         'nuxt.config.js': endent`
-        export default {
-          name: 'Foo',
-        }
+          export default {
+            name: 'Foo',
+          }
 
-      `,
+        `,
         'pages/index.vue': endent`
           <script>
           export default {
@@ -26,10 +26,10 @@ export default tester(
           }
           </script>
 
-      `,
+        `,
       },
       test: async () => {
-        const childProcess = execa.command('base dev')
+        const childProcess = execaCommand('base dev')
         try {
           await portReady(3000)
           await this.page.goto('http://localhost:3000')
@@ -55,7 +55,7 @@ export default tester(
                 baseConfig: 'self',
               },
               undefined,
-              2
+              2,
             ),
             ...config.files,
           })
@@ -65,5 +65,5 @@ export default tester(
     },
     testerPluginPuppeteer(),
     testerPluginTmpDir(),
-  ]
+  ],
 )
