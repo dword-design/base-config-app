@@ -24,7 +24,7 @@
   "dependencies": {
     "@dword-design/base-config-nuxt": "^4.0.0",
     "@dword-design/functions": "^4.0.0",
-    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/exec": "^6.0.0",
     "ceiling": "^3.0.0",
     "depcheck-package-name": "^3.0.0",
     "execa": "^7.1.1",
