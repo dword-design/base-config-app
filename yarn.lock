@@ -1524,7 +1524,7 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
-"@dword-design/functions@^5.0.0", "@dword-design/functions@^5.0.12":
+"@dword-design/functions@^5.0.0", "@dword-design/functions@^5.0.12", "@dword-design/functions@^5.0.20":
   version "5.0.20"
   resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.20.tgz#7fd0ecba58ba31998289f9a5897b23c98a6c183f"
   integrity sha512-V8cFMqGNS8aTUm1MktPapMDagHAmXYM3i0ixkv68hJgcaFDUFOtKPSqOVj0lp7u2ZZpKrZvg1CIYp0yCKvuWoA==
@@ -4491,19 +4491,19 @@ cardinal@^2.1.1:
     ansicolors "~0.3.2"
     redeyed "~2.1.0"
 
-ceiling@^3.0.0:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/ceiling/-/ceiling-3.0.8.tgz#c2e1cea0164e5e8bbbea074aede5ad2c867b5692"
-  integrity sha512-yQRE227UYLEsgenDCms2qYKX2qZC4NXiq/Ym6wjdLuwT8Ol2NLcAsDYjz36Urz7gltWdXaBLSia+nscZgcWuBQ==
+ceiling@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/ceiling/-/ceiling-4.0.0.tgz#c8fba34b3d09e89c39245d51ea4969a867bc25b0"
+  integrity sha512-LgUyOPLn8GFMUcAR/6hBqLaPPibGvtgUWM+jFW+orGFPp3W/uBZWR9lnrjB3hk17A+VxJZF75eNyQcLRcE/5gw==
   dependencies:
-    "@dword-design/functions" "^4.0.0"
-    cosmiconfig "^7.0.0"
-    globby "^11.0.1"
-    inquirer "^8.0.0"
-    make-cli "^2.0.0"
+    "@dword-design/functions" "^5.0.20"
+    cosmiconfig "^8.2.0"
+    globby "^13.1.4"
+    inquirer "^9.2.7"
+    jiti "^1.18.2"
+    make-cli "^3.0.4"
     plugin-name-to-package-name "^0.1.1"
     promise-sequential "^1.1.1"
-    resolve-from "^5.0.0"
 
 chalk@*, chalk@^5.2.0:
   version "5.2.0"
@@ -8129,7 +8129,7 @@ init-package-json@*:
     validate-npm-package-license "^3.0.4"
     validate-npm-package-name "^5.0.0"
 
-inquirer@8.2.5, inquirer@^8.0.0:
+inquirer@8.2.5:
   version "8.2.5"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.5.tgz#d8654a7542c35a9b9e069d27e2df4858784d54f8"
   integrity sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==
@@ -8150,7 +8150,7 @@ inquirer@8.2.5, inquirer@^8.0.0:
     through "^2.3.6"
     wrap-ansi "^7.0.0"
 
-inquirer@^9.1.5:
+inquirer@^9.1.5, inquirer@^9.2.7:
   version "9.2.7"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-9.2.7.tgz#61e00658efa9b4c76a83c2c3cb3ceb88fec70ac7"
   integrity sha512-Bf52lnfvNxGPJPltiNO2tLBp3zC339KNlGMqOkW+dsvNikBhcVDK5kqU2lVX2FTPzuXUFX5WJDlsw//w3ZwoTw==
@@ -9948,14 +9948,6 @@ magic-string@^0.30.0:
   integrity sha512-LA+31JYDJLs82r2ScLrlz1GjSgu66ZV518eyWT+S8VhyQn/JL0u9MeBOvQMGYiPk1DBiSN9DDMOcXvigJZaViQ==
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.4.13"
-
-make-cli@^2.0.0:
-  version "2.0.15"
-  resolved "https://registry.yarnpkg.com/make-cli/-/make-cli-2.0.15.tgz#4d049e685754a9b62522e0b3c0c9e2dc8046b98b"
-  integrity sha512-IRg1mC4GoJDTfjGiZuwN9rdeBvskP91jiU4ZKgR+yHmO4XXuhlhh4EofPvP7sg+4FFl37wVnDmUO7pwnx11oqQ==
-  dependencies:
-    "@dword-design/functions" "^4.0.0"
-    commander "^8.0.0"
 
 make-cli@^3.0.0, make-cli@^3.0.4:
   version "3.0.4"
