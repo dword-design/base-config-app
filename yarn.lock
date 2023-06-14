@@ -38,7 +38,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.22.5.tgz#b1f6c86a02d85d2dd3368a2b67c09add8cd0c255"
   integrity sha512-4Jc/YuIaYqKnDDz892kPIledykKg12Aw1PYX5i/TY28anJtacvM1Rrr8wbieB9GfEJwlzqT0hUEao0CxEebiDA==
 
-"@babel/core@^7.1.0", "@babel/core@^7.10.2", "@babel/core@^7.10.3", "@babel/core@^7.12.3", "@babel/core@^7.20.7", "@babel/core@^7.21.3", "@babel/core@^7.21.4", "@babel/core@^7.7.2", "@babel/core@^7.7.5", "@babel/core@^7.7.7":
+"@babel/core@^7.1.0", "@babel/core@^7.10.2", "@babel/core@^7.10.3", "@babel/core@^7.12.3", "@babel/core@^7.20.7", "@babel/core@^7.21.3", "@babel/core@^7.21.4", "@babel/core@^7.22.5", "@babel/core@^7.7.2", "@babel/core@^7.7.5", "@babel/core@^7.7.7":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.22.5.tgz#d67d9747ecf26ee7ecd3ebae1ee22225fe902a89"
   integrity sha512-SBuTAjg91A3eKOvD+bPEz3LlhHZRNu1nFOVts9lzDJTXshHTjII0BAtDS3Y2DAkdZdDKWVZGVwkDfc4Clxn1dg==
@@ -1328,11 +1328,12 @@
     fs-extra "^11.0.0"
     micromatch "^4.0.2"
 
-"@dword-design/base-config-nuxt@^4.0.0":
-  version "4.0.15"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-4.0.15.tgz#c5179f26f02f10d0672dbb4bb227d16bb349ecc5"
-  integrity sha512-UAUY2rX2I/qZ+e15p1peJ92AippmZhGDGfEg/ZX2q0lDLUk3wrw8QCYwvEzFcD5p53fsWKOZHQbI5jFXZy+oDg==
+"@dword-design/base-config-nuxt@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-5.0.0.tgz#8765b9b19c09c222732dba60449ec058276e38cd"
+  integrity sha512-zBQrgJk5yZxDvavdGHIMQygrJuzHeQuwxcPQsjDXgmkGZzppV2HQKXTGXwXR0lyG1tyN8tf4f5gEEx3DmiFt1Q==
   dependencies:
+    "@babel/core" "^7.22.5"
     "@dword-design/depcheck-parser-sass" "^4.0.0"
     "@dword-design/dotenv-json-extended" "^2.0.0"
     "@dword-design/functions" "^4.0.0"
@@ -1343,6 +1344,8 @@
     "@nuxtjs/i18n" "npm:@dword-design/nuxt-i18n"
     "@nuxtjs/stylelint-module" "^5.0.1"
     "@rollup/plugin-babel" "^6.0.3"
+    "@vitejs/plugin-vue" "^4.2.3"
+    "@vue/compiler-sfc" "^3.3.4"
     depcheck-package-name "^3.0.0"
     depcheck-parser-vue "^4.0.7"
     execa "^7.1.1"
