@@ -1,3 +1,15 @@
+# [4.0.0](https://github.com/dword-design/base-config-app/compare/v3.0.0...v4.0.0) (2023-06-14)
+
+
+### Bug Fixes
+
+* extends ([#137](https://github.com/dword-design/base-config-app/issues/137)) ([2581936](https://github.com/dword-design/base-config-app/commit/25819363e466eff6ad5aec3d0a6abe0fb192d91b))
+
+
+### BREAKING CHANGES
+
+* changes to config format because the config is now directly passed to nuxt
+
 # [3.0.0](https://github.com/dword-design/base-config-app/compare/v2.0.18...v3.0.0) (2023-05-19)
 
 
