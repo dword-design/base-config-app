@@ -1277,7 +1277,7 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^4"
@@ -1299,7 +1299,7 @@
     "@babel/preset-env" "^7.6.3"
     "@babel/preset-typescript" "^7.13.0"
     "@dword-design/functions" "^4.0.0"
-    "@vue/babel-preset-jsx" "github:dword-design/jsx#fork-babel-preset-jsx"
+    "@vue/babel-preset-jsx" dword-design/jsx#fork-babel-preset-jsx
     babel-plugin-add-module-exports "^1.0.2"
     babel-plugin-macros "^3.0.1"
     babel-plugin-module-resolver "^5.0.0"
@@ -1329,9 +1329,9 @@
     micromatch "^4.0.2"
 
 "@dword-design/base-config-nuxt@^5.0.0":
-  version "5.0.4"
-  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-5.0.4.tgz#6d46b8119a34a5fc0866d655e30967abe196185e"
-  integrity sha512-s4DI0SH71EAfziJRxVegEdXEYXm0sbfyL4vmec/66nzbIbu6leRrweHLU+qvN5YA590wNr81X1CQJA5gtrNDBg==
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@dword-design/base-config-nuxt/-/base-config-nuxt-5.0.6.tgz#1e405e14ee7ccadf5daace74fa8456bcee0e4bff"
+  integrity sha512-qpj5vTFzhmy250V5lFEI05kN+mPKK+ZxwlBjqRDcaH6bE5S4+lSRlPbdWTwRwruyVeHeD4WjyanT3PL3p6UHIA==
   dependencies:
     "@babel/core" "^7.22.5"
     "@dword-design/depcheck-parser-sass" "^4.0.0"
@@ -3278,7 +3278,6 @@
 
 "@vue/babel-preset-jsx@github:dword-design/jsx#fork-babel-preset-jsx":
   version "1.1.2"
-  uid a73cb9961541a60a66b1b99a69a32e00bc66d336
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/a73cb9961541a60a66b1b99a69a32e00bc66d336"
   dependencies:
     "@vue/babel-helper-vue-jsx-merge-props" "^1.0.0"
@@ -3297,7 +3296,6 @@
 
 "@vue/babel-sugar-inject-h@dword-design/jsx#fork-babel-sugar-inject-h":
   version "1.1.2"
-  uid cc36a2200c059120f37944615fb2ec0e22f8f3cc
   resolved "https://codeload.github.com/dword-design/jsx/tar.gz/cc36a2200c059120f37944615fb2ec0e22f8f3cc"
   dependencies:
     "@babel/plugin-syntax-jsx" "^7.2.0"
