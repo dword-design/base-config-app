@@ -1,3 +1,10 @@
+## [4.0.2](https://github.com/dword-design/base-config-app/compare/v4.0.1...v4.0.2) (2023-07-10)
+
+
+### Bug Fixes
+
+* add check unknown files ([65619c5](https://github.com/dword-design/base-config-app/commit/65619c5c048ca1877bc6ba4acdedeb76b40c3786))
+
 ## [4.0.1](https://github.com/dword-design/base-config-app/compare/v4.0.0...v4.0.1) (2023-06-26)
 
 
