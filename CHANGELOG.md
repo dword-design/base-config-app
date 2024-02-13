@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/dword-design/base-config-app/compare/v4.0.2...v5.0.0) (2024-02-13)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#144](https://github.com/dword-design/base-config-app/issues/144)) ([a3d573f](https://github.com/dword-design/base-config-app/commit/a3d573f9122c2b57d14f6f055ebdf981caed2e13))
+
+
+### BREAKING CHANGES
+
+* node.js >= 18
+
 ## [4.0.2](https://github.com/dword-design/base-config-app/compare/v4.0.1...v4.0.2) (2023-07-10)
 
 
