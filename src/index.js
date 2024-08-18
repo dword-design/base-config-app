@@ -1,19 +1,17 @@
-import getBaseConfigNuxt from '@dword-design/base-config-nuxt'
-import packageName from 'depcheck-package-name'
-import { execaCommand } from 'execa'
-import loadPkg from 'load-pkg'
-import outputFiles from 'output-files'
-import yaml from 'yaml'
+import getBaseConfigNuxt from '@dword-design/base-config-nuxt';
+import packageName from 'depcheck-package-name';
+import { execaCommand } from 'execa';
+import loadPkg from 'load-pkg';
+import outputFiles from 'output-files';
+import yaml from 'yaml';
 
-import dockerCompose from './docker-compose.js'
-import getEcosystemConfig from './get-ecosystem-config.js'
-import getNginxConfig from './get-nginx-config.js'
+import dockerCompose from './docker-compose.js';
+import getEcosystemConfig from './get-ecosystem-config.js';
+import getNginxConfig from './get-nginx-config.js';
 
 export default config => {
-  const baseConfigNuxt = getBaseConfigNuxt(config)
-
-  const packageConfig = loadPkg.sync()
-
+  const baseConfigNuxt = getBaseConfigNuxt(config);
+  const packageConfig = loadPkg.sync();
   return {
     ...baseConfigNuxt,
     allowedMatches: [
@@ -35,12 +33,9 @@ export default config => {
     ],
     isLockFileFixCommitType: true,
     npmPublish: false,
-    packageConfig: {
-      main: 'dist/index.js',
-    },
+    packageConfig: { main: 'dist/index.js' },
     prepare: async () => {
-      await baseConfigNuxt.prepare()
-
+      await baseConfigNuxt.prepare();
       return outputFiles({
         'docker-compose.yml': yaml.stringify(dockerCompose),
         'ecosystem.json': JSON.stringify(
@@ -53,24 +48,20 @@ export default config => {
           undefined,
           2,
         ),
-      })
+      });
     },
     useJobMatrix: false,
     ...(!packageConfig.private && {
       deployPlugins: [
         [
           packageName`@semantic-release/exec`,
-          {
-            publishCmd: `${packageName`pm2`} deploy production --force`,
-          },
+          { publishCmd: `${packageName`pm2`} deploy production --force` },
         ],
       ],
       preDeploySteps: [
         {
           uses: 'webfactory/ssh-agent@v0.5.1',
-          with: {
-            'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}',
-          },
+          with: { 'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}' },
         },
         { run: 'ssh-keyscan sebastianlandwehr.com >> ~/.ssh/known_hosts' },
       ],
@@ -92,5 +83,5 @@ export default config => {
           execaCommand('pm2 deploy production setup', { stdio: 'inherit' }),
       },
     },
-  }
-}
+  };
+};

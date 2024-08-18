@@ -1,20 +1,20 @@
-import fs from 'fs-extra'
-import hostedGitInfo from 'hosted-git-info'
-import parseGitConfig from 'parse-git-config'
-import parsePackagejsonName from 'parse-packagejson-name'
+import fs from 'fs-extra';
+import hostedGitInfo from 'hosted-git-info';
+import parseGitConfig from 'parse-git-config';
+import parsePackagejsonName from 'parse-packagejson-name';
 
 export default packageConfig => {
   const repositoryUrl = fs.existsSync('.git')
     ? parseGitConfig.sync()['remote "origin"']?.url
-    : undefined
+    : undefined;
 
-  const gitInfo = hostedGitInfo.fromUrl(repositoryUrl) || {}
+  const gitInfo = hostedGitInfo.fromUrl(repositoryUrl) || {};
+
   if (repositoryUrl !== undefined && gitInfo.type !== 'github') {
-    throw new Error('Only GitHub repositories are supported.')
+    throw new Error('Only GitHub repositories are supported.');
   }
 
-  const packageName = parsePackagejsonName(packageConfig.name).fullName
-
+  const packageName = parsePackagejsonName(packageConfig.name).fullName;
   return {
     apps: [
       {
@@ -38,5 +38,5 @@ export default packageConfig => {
         ref: 'origin/master',
       },
     },
-  }
-}
+  };
+};
