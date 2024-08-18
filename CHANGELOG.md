@@ -1,3 +1,12 @@
+## [5.0.1](https://github.com/dword-design/base-config-app/compare/v5.0.0...v5.0.1) (2024-08-18)
+
+
+### Bug Fixes
+
+* delete .babelrc.json ([5d16d9a](https://github.com/dword-design/base-config-app/commit/5d16d9a332b11c5d6edc7dfc1f542bf57bf60f06))
+* lock file maintenance ([#154](https://github.com/dword-design/base-config-app/issues/154)) ([d0d8eaa](https://github.com/dword-design/base-config-app/commit/d0d8eaa06984b2383079f797db4560f36386403c))
+* pnpm ([46a49f7](https://github.com/dword-design/base-config-app/commit/46a49f7a97af69dc4d1ba8adb281552d96ad468e))
+
 # [5.0.0](https://github.com/dword-design/base-config-app/compare/v4.0.2...v5.0.0) (2024-02-13)
 
 
