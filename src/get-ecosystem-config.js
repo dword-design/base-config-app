@@ -34,7 +34,7 @@ export default packageConfig => {
           repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
         }),
         'post-deploy':
-          'source ~/.nvm/nvm.sh && yarn --frozen-lockfile && yarn checkUnknownFiles && yarn prepublishOnly && pm2 startOrReload ecosystem.json',
+          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm prepublishOnly && pm2 startOrReload ecosystem.json',
         ref: 'origin/master',
       },
     },
