@@ -1,3 +1,10 @@
+## [5.0.2](https://github.com/dword-design/base-config-app/compare/v5.0.1...v5.0.2) (2024-10-03)
+
+
+### Bug Fixes
+
+* trigger release ([40e75f2](https://github.com/dword-design/base-config-app/commit/40e75f25cdcf92f5b1e56080c1fd7f2ea2df6007))
+
 ## [5.0.1](https://github.com/dword-design/base-config-app/compare/v5.0.0...v5.0.1) (2024-08-18)
 
 
