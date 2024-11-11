@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/dword-design/base-config-app/compare/v5.0.2...v5.0.3) (2024-11-11)
+
+
+### Bug Fixes
+
+* fix nginx config ([25972f5](https://github.com/dword-design/base-config-app/commit/25972f5a565958c9c0c0347569e7e963a86276a5))
+
 ## [5.0.2](https://github.com/dword-design/base-config-app/compare/v5.0.1...v5.0.2) (2024-10-03)
 
 
