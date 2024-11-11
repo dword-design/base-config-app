@@ -7,9 +7,9 @@ export default {
       volumes: ['./nginx:/etc/nginx/conf.d'],
     },
     web: {
-      command: 'bash -c "yarn --frozen-lockfile && yarn dev"',
+      command: 'bash -c "pnpm install --frozen-lockfile && pnpm dev"',
       environment: ['HOST=0.0.0.0'],
-      image: 'node:12',
+      image: 'node:20',
       ports: ['3000:3000'],
       volumes: ['.:/app', '/app/node_modules'],
       working_dir: '/app',
