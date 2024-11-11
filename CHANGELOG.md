@@ -1,3 +1,11 @@
+## [5.0.4](https://github.com/dword-design/base-config-app/compare/v5.0.3...v5.0.4) (2024-11-11)
+
+
+### Bug Fixes
+
+* ignore docker-compose for renovate ([6072b26](https://github.com/dword-design/base-config-app/commit/6072b26b72c7ff9bda3f74734a35138c122f6b1e))
+* some other fixes ([d17f42c](https://github.com/dword-design/base-config-app/commit/d17f42c14f0f5b2a6e992a77f2285e59bf0344fe))
+
 ## [5.0.3](https://github.com/dword-design/base-config-app/compare/v5.0.2...v5.0.3) (2024-11-11)
 
 
