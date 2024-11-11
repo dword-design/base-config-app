@@ -43,11 +43,7 @@ export default config => {
           undefined,
           2,
         ),
-        'nginx/default.config': JSON.stringify(
-          getNginxConfig(packageConfig),
-          undefined,
-          2,
-        ),
+        'nginx/default.config': getNginxConfig(packageConfig),
       });
     },
     useJobMatrix: false,
