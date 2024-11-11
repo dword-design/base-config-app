@@ -46,10 +46,8 @@ export default config => {
         'nginx/default.config': getNginxConfig(packageConfig),
       });
     },
+    renovateConfig: { ignorePaths: ['docker-compose.yml'] },
     useJobMatrix: false,
-    renovateConfig: {
-      ignorePaths: ['docker-compose.yml'],
-    },
     ...(!packageConfig.private && {
       deployPlugins: [
         [
