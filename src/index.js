@@ -47,6 +47,9 @@ export default config => {
       });
     },
     useJobMatrix: false,
+    renovateConfig: {
+      ignorePaths: ['docker-compose.yml'],
+    },
     ...(!packageConfig.private && {
       deployPlugins: [
         [
