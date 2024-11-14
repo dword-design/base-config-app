@@ -47,13 +47,16 @@ importers:
       pm2:
         specifier: ^5.3.0
         version: 5.4.2
+      tagged-template-noop:
+        specifier: ^2.1.1
+        version: 2.1.1
       yaml:
         specifier: ^2.2.2
         version: 2.6.0
     devDependencies:
       '@dword-design/base':
-        specifier: ^11.0.4
-        version: 11.2.5(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@22.9.0)(@typescript-eslint/parser@8.13.0(eslint@8.57.1)(typescript@5.6.3))(babel-plugin-module-resolver@5.0.2)(jest@27.5.1)(typescript@5.6.3)
+        specifier: ^11.2.6
+        version: 11.2.6(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@22.9.0)(@typescript-eslint/parser@8.13.0(eslint@8.57.1)(typescript@5.6.3))(babel-plugin-module-resolver@5.0.2)(jest@27.5.1)(typescript@5.6.3)
       '@dword-design/puppeteer':
         specifier: ^7.0.0
         version: 7.0.2(typescript@5.6.3)
@@ -869,8 +872,8 @@ packages:
     peerDependencies:
       h3: '*'
 
-  '@dword-design/base@11.2.5':
-    resolution: {integrity: sha512-OgYjab/w5LYajtGXHQmaQeG9ZBkk/v5YPrV0Pe+WGPa1iwGt70MsAyTBso8cyuNL6+MRGzjw7yjmGoK7BYEHjg==}
+  '@dword-design/base@11.2.6':
+    resolution: {integrity: sha512-pdyjLWQRAhh9jUFp+jmhWOnyuwInuEjZQTTJTarfqJK6huiGml44ob5HaJUTi9/7xhw4CU1AbLWO3Cn3/4u4pA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1339,16 +1342,16 @@ packages:
     resolution: {integrity: sha512-9WXn8YMAnL/DHdoWqCy6yLTXcLFxd8eXB9UNsViQA5JJV7neR+yahr+23X1wP0prhG338MruxAu65khRf+AJCw==}
     engines: {node: '>= 14'}
 
-  '@intlify/message-compiler@10.0.0':
-    resolution: {integrity: sha512-OcaWc63NC/9p1cMdgoNKBj4d61BH8sUW1Hfs6YijTd9656ZR4rNqXAlRnBrfS5ABq0vjQjpa8VnyvH9hK49yBw==}
+  '@intlify/message-compiler@11.0.0-beta.0':
+    resolution: {integrity: sha512-HWHv6jj7wJmHY5I73k80lBffDfnpqjx5vvn965YJB4lLvo0zkP3H15WGkwrLa/OR6fyYoP0DJVUKj9g2q7QJCA==}
     engines: {node: '>= 16'}
 
   '@intlify/message-compiler@9.3.0-beta.16':
     resolution: {integrity: sha512-CGQI3xRcs1ET75eDQ0DUy3MRYOqTauRIIgaMoISKiF83gqRWg93FqN8lGMKcpBqaF4tI0JhsfosCaGiBL9+dnw==}
     engines: {node: '>= 14'}
 
-  '@intlify/shared@10.0.0':
-    resolution: {integrity: sha512-6ngLfI7DOTew2dcF9WMJx+NnMWghMBhIiHbGg+wRvngpzD5KZJZiJVuzMsUQE1a5YebEmtpTEfUrDp/NqVGdiw==}
+  '@intlify/shared@11.0.0-beta.0':
+    resolution: {integrity: sha512-v/IAS+BBeaWIKPI4CgSKsil2vJ64naIUUENha3e7jfhq1CxinXQquQYUM2GcCC86USxzTGgu67nafbaYzHS3vA==}
     engines: {node: '>= 16'}
 
   '@intlify/shared@9.3.0-beta.16':
@@ -6062,6 +6065,9 @@ packages:
   mlly@1.7.2:
     resolution: {integrity: sha512-tN3dvVHYVz4DhSXinXIk7u9syPYaJvio118uomkovAtWBT+RdbP6Lfh/5Lvo519YMmwBafwlh20IPTXIStscpA==}
 
+  mlly@1.7.3:
+    resolution: {integrity: sha512-xUsx5n/mN0uQf4V548PKQ+YShA4/IW0KI1dZhrNrPCLG+xizETbHTkOa1f8/xut9JRPp8kQuMnz0oqwkTiLo/A==}
+
   mocha-ui-exports-auto-describe@3.0.0:
     resolution: {integrity: sha512-sS2UPuGMR/HCFUduIiUgBgRhbuy+xf88IGGMX+urMfN5hvoKQngZT+XiZQyjCRDy6RToxhbmSEeA055PnjXQ7Q==}
     engines: {node: '>=16'}
@@ -7017,6 +7023,10 @@ packages:
 
   postcss@8.4.48:
     resolution: {integrity: sha512-GCRK8F6+Dl7xYniR5a4FYbpBzU8XnZVeowqsQFYdcXuSbChgiks7qybSkbvnaeqv0G0B+dd9/jJgH8kkLDQeEA==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.4.49:
+    resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -8359,6 +8369,10 @@ packages:
     peerDependenciesMeta:
       webpack-sources:
         optional: true
+
+  unplugin@1.16.0:
+    resolution: {integrity: sha512-5liCNPuJW8dqh3+DM6uNM2EI3MLLpCKp/KY+9pB5M2S2SR2qvvDHhKgBOaTWEbZTAws3CXfB0rKTIolWKL05VQ==}
+    engines: {node: '>=14.0.0'}
 
   unset-value@1.0.0:
     resolution: {integrity: sha512-PcA2tsuGSF9cnySLHTLSh2qrQiJ70mn+r+Glzxv2TWZblxsxCC52BDlZoPCsz7STd9pN7EZetkWZBAvk4cgZdQ==}
@@ -10064,7 +10078,7 @@ snapshots:
       - webpack-sources
       - xml2js
 
-  '@dword-design/base@11.2.5(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@22.9.0)(@typescript-eslint/parser@8.13.0(eslint@8.57.1)(typescript@5.6.3))(babel-plugin-module-resolver@5.0.2)(jest@27.5.1)(typescript@5.6.3)':
+  '@dword-design/base@11.2.6(@babel/core@7.26.0)(@types/eslint@9.6.1)(@types/node@22.9.0)(@typescript-eslint/parser@8.13.0(eslint@8.57.1)(typescript@5.6.3))(babel-plugin-module-resolver@5.0.2)(jest@27.5.1)(typescript@5.6.3)':
     dependencies:
       '@commitlint/cli': 18.6.1(@types/node@22.9.0)(typescript@5.6.3)
       '@commitlint/config-conventional': 18.6.3
@@ -10294,7 +10308,7 @@ snapshots:
     dependencies:
       '@intlify/bundle-utils': 4.0.0(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))
       '@intlify/shared': 9.3.0-beta.16
-      '@intlify/unplugin-vue-i18n': 0.8.2(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))(webpack-sources@3.2.3)
+      '@intlify/unplugin-vue-i18n': 0.8.2(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))
       '@nuxt/kit': 3.14.159(magicast@0.3.5)(rollup@4.25.0)(webpack-sources@3.2.3)
       '@vue/compiler-sfc': 3.5.12
       cookie-es: 0.5.0
@@ -10304,11 +10318,11 @@ snapshots:
       js-cookie: 3.0.5
       knitwork: 1.1.0
       magic-string: 0.27.0
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
       pkg-types: 1.2.1
       ufo: 1.5.4
-      unplugin: 1.15.0(webpack-sources@3.2.3)
+      unplugin: 1.16.0
       vue-i18n: 9.3.0-beta.16(vue@3.5.12(typescript@5.6.3))
       vue-i18n-routing: 0.12.2(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))(vue-router@4.4.5(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3))
     transitivePeerDependencies:
@@ -10595,8 +10609,8 @@ snapshots:
 
   '@intlify/bundle-utils@4.0.0(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
-      '@intlify/message-compiler': 10.0.0
-      '@intlify/shared': 10.0.0
+      '@intlify/message-compiler': 11.0.0-beta.0
+      '@intlify/shared': 11.0.0-beta.0
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       yaml-eslint-parser: 0.3.2
@@ -10614,9 +10628,9 @@ snapshots:
     dependencies:
       '@intlify/shared': 9.3.0-beta.16
 
-  '@intlify/message-compiler@10.0.0':
+  '@intlify/message-compiler@11.0.0-beta.0':
     dependencies:
-      '@intlify/shared': 10.0.0
+      '@intlify/shared': 11.0.0-beta.0
       source-map-js: 1.2.1
 
   '@intlify/message-compiler@9.3.0-beta.16':
@@ -10624,14 +10638,14 @@ snapshots:
       '@intlify/shared': 9.3.0-beta.16
       source-map: 0.6.1
 
-  '@intlify/shared@10.0.0': {}
+  '@intlify/shared@11.0.0-beta.0': {}
 
   '@intlify/shared@9.3.0-beta.16': {}
 
-  '@intlify/unplugin-vue-i18n@0.8.2(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))(webpack-sources@3.2.3)':
+  '@intlify/unplugin-vue-i18n@0.8.2(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
       '@intlify/bundle-utils': 4.0.0(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))
-      '@intlify/shared': 10.0.0
+      '@intlify/shared': 11.0.0-beta.0
       '@rollup/pluginutils': 4.2.1
       '@vue/compiler-sfc': 3.5.12
       debug: 4.3.7(supports-color@9.4.0)
@@ -10641,12 +10655,11 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.1.1
       source-map: 0.6.1
-      unplugin: 1.15.0(webpack-sources@3.2.3)
+      unplugin: 1.16.0
     optionalDependencies:
       vue-i18n: 9.3.0-beta.16(vue@3.5.12(typescript@5.6.3))
     transitivePeerDependencies:
       - supports-color
-      - webpack-sources
 
   '@intlify/vue-devtools@9.3.0-beta.16':
     dependencies:
@@ -12001,7 +12014,7 @@ snapshots:
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
       magic-string: 0.30.12
-      postcss: 8.4.48
+      postcss: 8.4.49
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.12':
@@ -14261,7 +14274,7 @@ snapshots:
   externality@1.0.2:
     dependencies:
       enhanced-resolve: 5.17.1
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
       ufo: 1.5.4
 
@@ -16183,7 +16196,7 @@ snapshots:
       h3: 1.13.0
       http-shutdown: 1.2.2
       jiti: 2.4.0
-      mlly: 1.7.2
+      mlly: 1.7.3
       node-forge: 1.3.1
       pathe: 1.1.2
       std-env: 3.8.0
@@ -16206,7 +16219,7 @@ snapshots:
 
   local-pkg@0.5.0:
     dependencies:
-      mlly: 1.7.2
+      mlly: 1.7.3
       pkg-types: 1.2.1
 
   locate-path@2.0.0:
@@ -16527,6 +16540,13 @@ snapshots:
       pkg-types: 1.2.1
       ufo: 1.5.4
 
+  mlly@1.7.3:
+    dependencies:
+      acorn: 8.14.0
+      pathe: 1.1.2
+      pkg-types: 1.2.1
+      ufo: 1.5.4
+
   mocha-ui-exports-auto-describe@3.0.0:
     dependencies:
       '@dword-design/functions': 5.0.27
@@ -16687,7 +16707,7 @@ snapshots:
       unimport: 3.13.1(rollup@4.25.0)(webpack-sources@3.2.3)
       unstorage: 1.13.1(ioredis@5.4.1)
       untyped: 1.5.1
-      unwasm: 0.3.9(webpack-sources@3.2.3)
+      unwasm: 0.3.9
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -17673,6 +17693,12 @@ snapshots:
   postcss-value-parser@4.2.0: {}
 
   postcss@8.4.48:
+    dependencies:
+      nanoid: 3.3.7
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.4.49:
     dependencies:
       nanoid: 3.3.7
       picocolors: 1.1.1
@@ -19198,6 +19224,11 @@ snapshots:
     optionalDependencies:
       webpack-sources: 3.2.3
 
+  unplugin@1.16.0:
+    dependencies:
+      acorn: 8.14.0
+      webpack-virtual-modules: 0.6.2
+
   unset-value@1.0.0:
     dependencies:
       has-value: 0.3.1
@@ -19236,16 +19267,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  unwasm@0.3.9(webpack-sources@3.2.3):
+  unwasm@0.3.9:
     dependencies:
       knitwork: 1.1.0
       magic-string: 0.30.12
-      mlly: 1.7.2
+      mlly: 1.7.3
       pathe: 1.1.2
       pkg-types: 1.2.1
-      unplugin: 1.15.0(webpack-sources@3.2.3)
-    transitivePeerDependencies:
-      - webpack-sources
+      unplugin: 1.16.0
 
   update-browserslist-db@1.1.1(browserslist@4.24.2):
     dependencies:
@@ -19475,7 +19504,7 @@ snapshots:
 
   vue-i18n-routing@0.12.2(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))(vue-router@4.4.5(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3)):
     dependencies:
-      '@intlify/shared': 10.0.0
+      '@intlify/shared': 11.0.0-beta.0
       '@intlify/vue-i18n-bridge': 0.8.0(vue-i18n@9.3.0-beta.16(vue@3.5.12(typescript@5.6.3)))
       '@intlify/vue-router-bridge': 0.8.0(vue-router@4.4.5(vue@3.5.12(typescript@5.6.3)))(vue@3.5.12(typescript@5.6.3))
       ufo: 1.5.4

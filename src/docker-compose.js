@@ -1,3 +1,5 @@
+import nodejsVersion from 'tagged-template-noop';
+
 export default {
   services: {
     proxy: {
@@ -9,7 +11,7 @@ export default {
     web: {
       command: 'bash -c "pnpm install --frozen-lockfile && pnpm dev"',
       environment: ['HOST=0.0.0.0'],
-      image: 'node:20',
+      image: `node:${nodejsVersion`20`}`,
       ports: ['3000:3000'],
       volumes: ['.:/app', '/app/node_modules'],
       working_dir: '/app',

@@ -35,10 +35,11 @@
     "parse-git-config": "^3.0.0",
     "parse-packagejson-name": "^1.0.1",
     "pm2": "^5.3.0",
+    "tagged-template-noop": "^2.1.1",
     "yaml": "^2.2.2"
   },
   "devDependencies": {
-    "@dword-design/base": "^11.0.4",
+    "@dword-design/base": "^11.2.6",
     "@dword-design/puppeteer": "^7.0.0",
     "@dword-design/tester": "^2.0.9",
     "@dword-design/tester-plugin-puppeteer": "^3.0.0",
