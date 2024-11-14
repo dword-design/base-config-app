@@ -1,3 +1,10 @@
+## [5.0.5](https://github.com/dword-design/base-config-app/compare/v5.0.4...v5.0.5) (2024-11-14)
+
+
+### Bug Fixes
+
+* make nodejs version upgradable ([a21080a](https://github.com/dword-design/base-config-app/commit/a21080a2359b1522b689d0b70b7d8a0f8af9ce28))
+
 ## [5.0.4](https://github.com/dword-design/base-config-app/compare/v5.0.3...v5.0.4) (2024-11-11)
 
 
