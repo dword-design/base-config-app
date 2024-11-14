@@ -1,3 +1,10 @@
+## [5.0.6](https://github.com/dword-design/base-config-app/compare/v5.0.5...v5.0.6) (2024-11-14)
+
+
+### Bug Fixes
+
+* update dependency node to v22 ([#174](https://github.com/dword-design/base-config-app/issues/174)) ([e8db5d3](https://github.com/dword-design/base-config-app/commit/e8db5d36adbcb3b739404e3e50c0449c9719db92))
+
 ## [5.0.5](https://github.com/dword-design/base-config-app/compare/v5.0.4...v5.0.5) (2024-11-14)
 
 
