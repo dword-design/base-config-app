@@ -30,8 +30,8 @@ importers:
         specifier: ^11.1.1
         version: 11.3.0
       hosted-git-info:
-        specifier: ^7.0.1
-        version: 7.0.2
+        specifier: ^8.0.0
+        version: 8.0.0
       load-pkg:
         specifier: ^4.0.0
         version: 4.0.0
@@ -4718,6 +4718,10 @@ packages:
   hosted-git-info@7.0.2:
     resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
+
+  hosted-git-info@8.0.0:
+    resolution: {integrity: sha512-4nw3vOVR+vHUOT8+U4giwe2tcGv+R3pwwRidUe67DoMBTjhrfr6rZYJVVwdkBE+Um050SG+X9tf0Jo4fOpn01w==}
+    engines: {node: ^18.17.0 || >=20.5.0}
 
   html-encoding-sniffer@2.0.1:
     resolution: {integrity: sha512-D5JbOMBIR/TVZkubHT+OyT2705QvogUW4IBn6nHd756OwieSF9aDYFj4dv6HHEVGYbHaLETa3WggZYWWMyy3ZQ==}
@@ -14958,6 +14962,10 @@ snapshots:
       lru-cache: 6.0.0
 
   hosted-git-info@7.0.2:
+    dependencies:
+      lru-cache: 10.4.3
+
+  hosted-git-info@8.0.0:
     dependencies:
       lru-cache: 10.4.3
 
