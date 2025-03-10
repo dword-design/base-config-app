@@ -47,7 +47,7 @@
     "nuxt-dev-ready": "^3.0.0",
     "tree-kill-promise": "^3.0.14"
   },
-  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247",
+  "packageManager": "pnpm@9.15.8+sha512.4a64c3cd524cb562bfdad4572820776816e6f98afadbf2283a860f8497d9767f68419918e099791be8c116a1fa218f1379250d97bb706831227859b7d598122c",
   "engines": {
     "node": ">=18"
   },
