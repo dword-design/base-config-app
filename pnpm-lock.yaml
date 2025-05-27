@@ -63,6 +63,9 @@ importers:
       nuxt-dev-ready:
         specifier: ^3.0.0
         version: 3.0.0
+      playwright-chromium:
+        specifier: ^1.52.0
+        version: 1.52.0
       playwright-local-tmp-dir:
         specifier: ^1.0.2
         version: 1.0.2(@playwright/test@1.52.0)
@@ -7357,6 +7360,11 @@ packages:
   pkg-up@3.1.0:
     resolution: {integrity: sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==}
     engines: {node: '>=8'}
+
+  playwright-chromium@1.52.0:
+    resolution: {integrity: sha512-ZTpzBzRFFRglyqRnAqdK5mFaw1P41qe8V2zSR+fA0eKPgGEEaH7r91ejXKijs3WhReatRcatHQe3ndMBMN1PLA==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   playwright-core@1.52.0:
     resolution: {integrity: sha512-l2osTgLXSMeuLZOML9qYODUQoPPnUsKsb5/P6LJ2e6uPKXUdPK5WYhN4z03G+YNbWmGDY4YENauNu4ZKczreHg==}
@@ -18688,6 +18696,10 @@ snapshots:
   pkg-up@3.1.0:
     dependencies:
       find-up: 3.0.0
+
+  playwright-chromium@1.52.0:
+    dependencies:
+      playwright-core: 1.52.0
 
   playwright-core@1.52.0: {}
 
