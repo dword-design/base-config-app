@@ -1,6 +1,7 @@
 {
   "depcheckConfig": {
     "ignoreMatches": [
+      "playwright",
       "playwright-chromium"
     ]
   },
