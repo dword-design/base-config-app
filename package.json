@@ -40,11 +40,9 @@
   },
   "devDependencies": {
     "@dword-design/base": "^12.0.12",
-    "@dword-design/puppeteer": "^7.0.2",
-    "@dword-design/tester": "^2.0.19",
-    "@dword-design/tester-plugin-puppeteer": "^3.0.3",
-    "@dword-design/tester-plugin-tmp-dir": "^2.1.26",
+    "@playwright/test": "^1.52.0",
     "nuxt-dev-ready": "^3.0.0",
+    "playwright-local-tmp-dir": "^1.0.2",
     "tree-kill-promise": "^3.0.14"
   },
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
