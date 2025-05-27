@@ -1,4 +1,4 @@
-import getBaseConfigNuxt from '@dword-design/base-config-nuxt';
+import baseConfigNuxt from '@dword-design/base-config-nuxt';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
 import loadPkg from 'load-pkg';
@@ -9,8 +9,7 @@ import dockerCompose from './docker-compose.js';
 import getEcosystemConfig from './get-ecosystem-config.js';
 import getNginxConfig from './get-nginx-config.js';
 
-export default config => {
-  const baseConfigNuxt = getBaseConfigNuxt(config);
+export default () => {
   const packageConfig = loadPkg.sync();
   return {
     ...baseConfigNuxt,
