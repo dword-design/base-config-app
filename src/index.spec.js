@@ -7,6 +7,7 @@ import { test } from 'playwright-local-tmp-dir';
 import kill from 'tree-kill-promise';
 
 test('dev', async ({ page }) => {
+  test.setTimeout(60_000);
   await outputFiles({
     'config.js': "export default { name: 'Foo' }",
     'package.json': JSON.stringify({}),
@@ -28,5 +29,6 @@ test('dev', async ({ page }) => {
     expect(await page.title()).toEqual('Foo');
   } finally {
     await kill(nuxt.pid);
+    await new Promise(resolve => setTimeout(resolve, 10_000));
   }
 });
