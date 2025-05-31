@@ -36,10 +36,10 @@ export default function (config) {
     packageConfig: { main: 'dist/index.js' },
     prepare: async () => {
       await baseConfigNuxt.prepare();
-      return outputFiles({
+      return outputFiles(this.cwd, {
         'docker-compose.yml': yaml.stringify(dockerCompose),
         'ecosystem.json': JSON.stringify(
-          getEcosystemConfig(packageConfig),
+          getEcosystemConfig(packageConfig, { cwd: this.cwd }),
           undefined,
           2,
         ),

@@ -1,29 +1,32 @@
-import { expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import { execaCommand } from 'execa';
-import { test } from 'playwright-local-tmp-dir';
 
 import self from './get-ecosystem-config.js';
 
-test('git https url', async () => {
-  await execaCommand('git init');
+test('git https url', async ({}, testInfo) => {
+  const cwd = testInfo.outputPath();
+  await execaCommand('git init', { cwd });
 
   await execaCommand(
     'git remote add origin https://github.com/dword-design/foo.git',
+    { cwd },
   );
 
-  expect(self({ name: 'foo' }).deploy.production.repo).toEqual(
+  expect(self({ name: 'foo' }, { cwd }).deploy.production.repo).toEqual(
     'git@github.com:dword-design/foo.git',
   );
 });
 
-test('git ssh url', async () => {
-  await execaCommand('git init');
+test('git ssh url', async ({}, testInfo) => {
+  const cwd = testInfo.outputPath();
+  await execaCommand('git init', { cwd });
 
   await execaCommand(
     'git remote add origin git@github.com:dword-design/foo.git',
+    { cwd },
   );
 
-  expect(self({ name: 'foo' }).deploy.production.repo).toEqual(
+  expect(self({ name: 'foo' }, { cwd }).deploy.production.repo).toEqual(
     'git@github.com:dword-design/foo.git',
   );
 });
