@@ -1,33 +1,32 @@
-import tester from '@dword-design/tester';
-import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
+import { expect, test } from '@playwright/test';
 import { execaCommand } from 'execa';
 
 import self from './get-ecosystem-config.js';
 
-export default tester(
-  {
-    'git https url': async () => {
-      await execaCommand('git init');
+test('git https url', async ({}, testInfo) => {
+  const cwd = testInfo.outputPath();
+  await execaCommand('git init', { cwd });
 
-      await execaCommand(
-        'git remote add origin https://github.com/dword-design/foo.git',
-      );
+  await execaCommand(
+    'git remote add origin https://github.com/dword-design/foo.git',
+    { cwd },
+  );
 
-      expect(self({ name: 'foo' }).deploy.production.repo).toEqual(
-        'git@github.com:dword-design/foo.git',
-      );
-    },
-    'git ssh url': async () => {
-      await execaCommand('git init');
+  expect(self({ name: 'foo' }, { cwd }).deploy.production.repo).toEqual(
+    'git@github.com:dword-design/foo.git',
+  );
+});
 
-      await execaCommand(
-        'git remote add origin git@github.com:dword-design/foo.git',
-      );
+test('git ssh url', async ({}, testInfo) => {
+  const cwd = testInfo.outputPath();
+  await execaCommand('git init', { cwd });
 
-      expect(self({ name: 'foo' }).deploy.production.repo).toEqual(
-        'git@github.com:dword-design/foo.git',
-      );
-    },
-  },
-  [testerPluginTmpDir()],
-);
+  await execaCommand(
+    'git remote add origin git@github.com:dword-design/foo.git',
+    { cwd },
+  );
+
+  expect(self({ name: 'foo' }, { cwd }).deploy.production.repo).toEqual(
+    'git@github.com:dword-design/foo.git',
+  );
+});

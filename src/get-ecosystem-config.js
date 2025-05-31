@@ -1,11 +1,13 @@
+import pathLib from 'node:path';
+
 import fs from 'fs-extra';
 import hostedGitInfo from 'hosted-git-info';
 import parseGitConfig from 'parse-git-config';
 import parsePackagejsonName from 'parse-packagejson-name';
 
-export default packageConfig => {
-  const repositoryUrl = fs.existsSync('.git')
-    ? parseGitConfig.sync()['remote "origin"']?.url
+export default (packageConfig, { cwd = '.' } = {}) => {
+  const repositoryUrl = fs.existsSync(pathLib.join(cwd, '.git'))
+    ? parseGitConfig.sync({ cwd })['remote "origin"']?.url
     : undefined;
 
   const gitInfo = hostedGitInfo.fromUrl(repositoryUrl) || {};

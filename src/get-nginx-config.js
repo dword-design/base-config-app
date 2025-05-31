@@ -1,9 +1,9 @@
-import { endent } from '@dword-design/functions';
+import dedent from 'dedent';
 import parsePackagejsonName from 'parse-packagejson-name';
 
 export default packageConfig => {
   const packageName = parsePackagejsonName(packageConfig.name).fullName;
-  return endent`
+  return dedent`
     upstream web {
       server web:3000;
     }

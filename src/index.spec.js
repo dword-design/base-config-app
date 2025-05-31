@@ -1,42 +1,37 @@
 import { Base } from '@dword-design/base';
-import { endent } from '@dword-design/functions';
-import tester from '@dword-design/tester';
-import testerPluginPuppeteer from '@dword-design/tester-plugin-puppeteer';
-import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
+import { expect, test } from '@playwright/test';
+import dedent from 'dedent';
+import getPort from 'get-port';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
 
-export default tester(
-  {
-    async dev() {
-      await outputFiles({
-        'config.js': endent`
-          export default {
-            name: 'Foo',
-          }
-        `,
-        'package.json': JSON.stringify({}),
-        'pages/index.vue': endent`
-          <template>
-            <div class="foo" />
-          </template>
-        `,
-      });
+import config from './index.js';
 
-      const base = new Base({ name: '../src/index.js' });
-      await base.prepare();
-      const nuxt = base.run('dev');
+test('dev', async ({ page }, testInfo) => {
+  const cwd = testInfo.outputPath();
 
-      try {
-        await nuxtDevReady();
-        await this.page.goto('http://localhost:3000');
-        await this.page.$('.foo');
-        expect(await this.page.title()).toEqual('Foo');
-      } finally {
-        await kill(nuxt.pid);
-      }
-    },
-  },
-  [testerPluginPuppeteer(), testerPluginTmpDir()],
-);
+  await outputFiles(cwd, {
+    'config.js': "export default { name: 'Foo' };",
+    'package.json': JSON.stringify({}),
+    'pages/index.vue': dedent`
+      <template>
+        <div class="foo" />
+      </template>
+    `,
+  });
+
+  const base = new Base(config, { cwd });
+  await base.prepare();
+  const port = await getPort();
+  const nuxt = base.run('dev', { env: { PORT: port } });
+
+  try {
+    await nuxtDevReady(port);
+    await page.goto(`http://localhost:${port}`);
+    await expect(page.locator('.foo')).toBeAttached();
+    expect(await page.title()).toEqual('Foo');
+  } finally {
+    await kill(nuxt.pid);
+  }
+});

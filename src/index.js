@@ -9,9 +9,9 @@ import dockerCompose from './docker-compose.js';
 import getEcosystemConfig from './get-ecosystem-config.js';
 import getNginxConfig from './get-nginx-config.js';
 
-export default config => {
-  const baseConfigNuxt = getBaseConfigNuxt(config);
+export default function (config) {
   const packageConfig = loadPkg.sync();
+  const baseConfigNuxt = getBaseConfigNuxt.call(this, config);
   return {
     ...baseConfigNuxt,
     allowedMatches: [
@@ -36,10 +36,10 @@ export default config => {
     packageConfig: { main: 'dist/index.js' },
     prepare: async () => {
       await baseConfigNuxt.prepare();
-      return outputFiles({
+      return outputFiles(this.cwd, {
         'docker-compose.yml': yaml.stringify(dockerCompose),
         'ecosystem.json': JSON.stringify(
-          getEcosystemConfig(packageConfig),
+          getEcosystemConfig(packageConfig, { cwd: this.cwd }),
           undefined,
           2,
         ),
@@ -81,4 +81,4 @@ export default config => {
       },
     },
   };
-};
+}
