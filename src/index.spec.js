@@ -8,6 +8,7 @@ import kill from 'tree-kill-promise';
 
 test('dev', async ({ page }) => {
   test.setTimeout(60_000);
+
   await outputFiles({
     'config.js': "export default { name: 'Foo' }",
     'package.json': JSON.stringify({}),
