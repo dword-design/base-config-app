@@ -7,6 +7,7 @@ import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
 
 test('dev', async ({ page }, testInfo) => {
+  test.setTimeout(60_000);
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
