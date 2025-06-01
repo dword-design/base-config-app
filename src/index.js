@@ -1,4 +1,6 @@
-import getBaseConfigNuxt from '@dword-design/base-config-nuxt';
+import getBaseConfigNuxt, {
+  getEslintConfig,
+} from '@dword-design/base-config-nuxt';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
 import loadPkg from 'load-pkg';
@@ -26,6 +28,10 @@ export default function (config) {
       'ecosystem.json',
       'nginx',
     ],
+    eslintConfig: getEslintConfig({
+      ignore: ['ecosystem.json'],
+      virtualImports: config.virtualImports,
+    }),
     gitignore: [
       ...baseConfigNuxt.gitignore,
       '/.ceilingrc.json',

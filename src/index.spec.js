@@ -6,8 +6,6 @@ import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
 
-import config from './index.js';
-
 test('dev', async ({ page }, testInfo) => {
   const cwd = testInfo.outputPath();
 
@@ -21,7 +19,7 @@ test('dev', async ({ page }, testInfo) => {
     `,
   });
 
-  const base = new Base(config, { cwd });
+  const base = new Base({ name: '../../src/index.js' }, { cwd });
   await base.prepare();
   const port = await getPort();
   const nuxt = base.run('dev', { env: { PORT: port } });
