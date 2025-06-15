@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/dword-design/base-config-app/compare/v6.0.0...v6.0.1) (2025-06-15)
+
+
+### Bug Fixes
+
+* browser-chromium ([#196](https://github.com/dword-design/base-config-app/issues/196)) ([fa63089](https://github.com/dword-design/base-config-app/commit/fa63089575cbaae59dee695a648952c2137a112d))
+
 # [6.0.0](https://github.com/dword-design/base-config-app/compare/v5.0.8...v6.0.0) (2025-06-15)
 
 
