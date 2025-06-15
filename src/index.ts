@@ -12,7 +12,7 @@ import getEcosystemConfig from './get-ecosystem-config';
 import getNginxConfig from './get-nginx-config';
 
 export default function (config) {
-  const packageConfig = loadPkg.sync({ cwd: this.cwd });
+  const packageConfig = loadPkg.sync(this.cwd);
   const baseConfigNuxt = getBaseConfigNuxt.call(this, config);
   return {
     ...baseConfigNuxt,
