@@ -7,12 +7,12 @@ import loadPkg from 'load-pkg';
 import outputFiles from 'output-files';
 import yaml from 'yaml';
 
-import dockerCompose from './docker-compose.js';
-import getEcosystemConfig from './get-ecosystem-config.js';
-import getNginxConfig from './get-nginx-config.js';
+import dockerCompose from './docker-compose';
+import getEcosystemConfig from './get-ecosystem-config';
+import getNginxConfig from './get-nginx-config';
 
 export default function (config) {
-  const packageConfig = loadPkg.sync();
+  const packageConfig = loadPkg.sync({ cwd: this.cwd });
   const baseConfigNuxt = getBaseConfigNuxt.call(this, config);
   return {
     ...baseConfigNuxt,
