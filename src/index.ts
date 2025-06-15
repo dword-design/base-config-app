@@ -66,7 +66,7 @@ export default function (config) {
           uses: 'webfactory/ssh-agent@v0.5.1',
           with: { 'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}' },
         },
-        { run: 'ssh-keyscan sebastianlandwehr.com >> ~/.ssh/known_hosts' },
+        { run: 'ssh-keyscan -H sebastianlandwehr.com >> ~/.ssh/known_hosts' },
       ],
     }),
     commands: {
