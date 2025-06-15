@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 import { execaCommand } from 'execa';
 
-import self from './get-ecosystem-config.js';
+import self from './get-ecosystem-config';
 
 test('git https url', async ({}, testInfo) => {
   const cwd = testInfo.outputPath();

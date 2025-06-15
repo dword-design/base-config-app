@@ -1,9 +1,9 @@
-import dedent from 'dedent';
+import endent from 'endent';
 import parsePackagejsonName from 'parse-packagejson-name';
 
 export default packageConfig => {
   const packageName = parsePackagejsonName(packageConfig.name).fullName;
-  return dedent`
+  return endent`
     upstream web {
       server web:3000;
     }

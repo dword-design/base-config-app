@@ -1,6 +1,6 @@
 import { Base } from '@dword-design/base';
 import { expect, test } from '@playwright/test';
-import dedent from 'dedent';
+import endent from 'endent';
 import getPort from 'get-port';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
@@ -11,16 +11,16 @@ test('dev', async ({ page }, testInfo) => {
   const cwd = testInfo.outputPath();
 
   await outputFiles(cwd, {
-    'config.js': "export default { name: 'Foo' };",
+    'config.ts': "export default { name: 'Foo' };",
     'package.json': JSON.stringify({}),
-    'pages/index.vue': dedent`
+    'pages/index.vue': endent`
       <template>
         <div class="foo" />
       </template>
     `,
   });
 
-  const base = new Base({ name: '../../src/index.js' }, { cwd });
+  const base = new Base({ name: '../../src' }, { cwd });
   await base.prepare();
   const port = await getPort();
   const nuxt = base.run('dev', { env: { PORT: port } });
