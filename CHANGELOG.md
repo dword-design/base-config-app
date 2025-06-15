@@ -1,3 +1,15 @@
+# [6.0.0](https://github.com/dword-design/base-config-app/compare/v5.0.8...v6.0.0) (2025-06-15)
+
+
+### Bug Fixes
+
+* typescript ([#194](https://github.com/dword-design/base-config-app/issues/194)) ([e78763d](https://github.com/dword-design/base-config-app/commit/e78763d91e476310ff03d79761211f231c3d42be))
+
+
+### BREAKING CHANGES
+
+* typescript
+
 ## [5.0.8](https://github.com/dword-design/base-config-app/compare/v5.0.7...v5.0.8) (2025-06-01)
 
 
