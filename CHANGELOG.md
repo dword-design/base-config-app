@@ -1,3 +1,11 @@
+## [6.0.2](https://github.com/dword-design/base-config-app/compare/v6.0.1...v6.0.2) (2025-06-15)
+
+
+### Bug Fixes
+
+* fix cwd ([b9bd554](https://github.com/dword-design/base-config-app/commit/b9bd554d26410f2f91fb8dd8603db4f916cb07ab))
+* hash hostname ([ec2f856](https://github.com/dword-design/base-config-app/commit/ec2f856622a54e1a6b70651bc6218a742d0820b9))
+
 ## [6.0.1](https://github.com/dword-design/base-config-app/compare/v6.0.0...v6.0.1) (2025-06-15)
 
 
