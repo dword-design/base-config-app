@@ -1,2 +1,6 @@
+ignoredBuiltDependencies:
+  - '@parcel/watcher'
+  - esbuild
+  - unrs-resolver
 onlyBuiltDependencies:
-  - playwright-chromium
+  - '@playwright/browser-chromium'
