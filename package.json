@@ -41,7 +41,7 @@
     "output-files": "^2.0.32",
     "parse-git-config": "npm:@dword-design/parse-git-config@^0.0.1",
     "parse-packagejson-name": "^1.0.1",
-    "pm2": "^5.4.3",
+    "pm2": "^6.0.0",
     "tagged-template-noop": "^2.1.1",
     "yaml": "^2.8.0"
   },
