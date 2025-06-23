@@ -30,7 +30,6 @@
   },
   "dependencies": {
     "@dword-design/base-config-nuxt": "^7.0.0",
-    "@playwright/browser-chromium": "^1.53.0",
     "@semantic-release/exec": "^6.0.3",
     "ceiling": "^4.0.0",
     "depcheck-package-name": "^3.0.1",
@@ -48,6 +47,7 @@
   },
   "devDependencies": {
     "@dword-design/base": "^13.0.7",
+    "@playwright/browser-chromium": "^1.53.0",
     "@playwright/test": "^1.53.0",
     "get-port": "^7.1.0",
     "nuxt-dev-ready": "^4.0.1",
