@@ -46,7 +46,7 @@
     "yaml": "^2.8.0"
   },
   "devDependencies": {
-    "@dword-design/base": "^13.0.7",
+    "@dword-design/base": "^14.0.0",
     "@playwright/browser-chromium": "^1.53.0",
     "@playwright/test": "^1.53.0",
     "get-port": "^7.1.0",
