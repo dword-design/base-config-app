@@ -1,3 +1,16 @@
+# [7.0.0](https://github.com/dword-design/base-config-app/compare/v6.0.3...v7.0.0) (2025-07-21)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#199](https://github.com/dword-design/base-config-app/issues/199)) ([d610cf6](https://github.com/dword-design/base-config-app/commit/d610cf6ec161a5a3a2cd296cf1601f05a905bed5))
+
+
+### BREAKING CHANGES
+
+* node.js >= 20
+* drop TEST_ prefix for environment variables
+
 ## [6.0.3](https://github.com/dword-design/base-config-app/compare/v6.0.2...v6.0.3) (2025-06-23)
 
 
