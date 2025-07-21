@@ -1,3 +1,10 @@
+## [7.0.2](https://github.com/dword-design/base-config-app/compare/v7.0.1...v7.0.2) (2025-07-21)
+
+
+### Bug Fixes
+
+* update pnpm to v10.13.1 ([#189](https://github.com/dword-design/base-config-app/issues/189)) ([e2a20b8](https://github.com/dword-design/base-config-app/commit/e2a20b8f1c8e8202496c604961ceb1c68f95413d))
+
 ## [7.0.1](https://github.com/dword-design/base-config-app/compare/v7.0.0...v7.0.1) (2025-07-21)
 
 
