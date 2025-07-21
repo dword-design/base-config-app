@@ -1,3 +1,10 @@
+## [7.0.1](https://github.com/dword-design/base-config-app/compare/v7.0.0...v7.0.1) (2025-07-21)
+
+
+### Bug Fixes
+
+* fix cwd ([4124ace](https://github.com/dword-design/base-config-app/commit/4124ace38e727f96350ef254c03d639313342c05))
+
 # [7.0.0](https://github.com/dword-design/base-config-app/compare/v6.0.3...v7.0.0) (2025-07-21)
 
 
