@@ -83,7 +83,9 @@ export default function (config) {
       },
       setupDeploy: {
         handler: () =>
-          execaCommand('pm2 deploy production setup', { stdio: 'inherit' }),
+          execaCommand(`${packageName`pm2`} deploy production setup`, {
+            stdio: 'inherit',
+          }),
       },
     },
   };
