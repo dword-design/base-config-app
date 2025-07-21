@@ -74,18 +74,24 @@ export default function (config) {
       pull: {
         arguments: '<endpoint>',
         handler: endpoint =>
-          execaCommand(`ceiling pull ${endpoint}`, { stdio: 'inherit', cwd: this.cwd }),
+          execaCommand(`ceiling pull ${endpoint}`, {
+            cwd: this.cwd,
+            stdio: 'inherit',
+          }),
       },
       push: {
         arguments: '<endpoint>',
         handler: endpoint =>
-          execaCommand(`ceiling push ${endpoint}`, { stdio: 'inherit', cwd: this.cwd }),
+          execaCommand(`ceiling push ${endpoint}`, {
+            cwd: this.cwd,
+            stdio: 'inherit',
+          }),
       },
       setupDeploy: {
         handler: () =>
           execaCommand(`${packageName`pm2`} deploy production setup`, {
-            stdio: 'inherit',
             cwd: this.cwd,
+            stdio: 'inherit',
           }),
       },
     },
