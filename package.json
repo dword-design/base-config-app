@@ -38,7 +38,7 @@
     "endent": "npm:@dword-design/endent@^1.4.7",
     "execa": "^9.6.0",
     "fs-extra": "^11.3.0",
-    "hosted-git-info": "^8.1.0",
+    "hosted-git-info": "^9.0.0",
     "load-pkg": "^4.0.0",
     "output-files": "^3.0.0",
     "parse-git-config": "npm:@dword-design/parse-git-config@^0.0.1",
