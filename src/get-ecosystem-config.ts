@@ -31,13 +31,13 @@ export default (packageConfig, { cwd = '.' } = {}) => {
       production: {
         host: ['sebastianlandwehr.com'],
         path: `/var/www/${packageName}`,
+        'post-deploy':
+          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm prepublishOnly && pm2 startOrReload ecosystem.json',
+        ref: 'origin/master',
         user: 'root',
         ...(repositoryUrl && {
           repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
         }),
-        'post-deploy':
-          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm prepublishOnly && pm2 startOrReload ecosystem.json',
-        ref: 'origin/master',
       },
     },
   };
