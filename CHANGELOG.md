@@ -1,3 +1,10 @@
+## [7.0.3](https://github.com/dword-design/base-config-app/compare/v7.0.2...v7.0.3) (2025-07-30)
+
+
+### Bug Fixes
+
+* fix ecosystem order ([5410e31](https://github.com/dword-design/base-config-app/commit/5410e311faf2eb1573560b527d6f80d0a5d9ef37))
+
 ## [7.0.2](https://github.com/dword-design/base-config-app/compare/v7.0.1...v7.0.2) (2025-07-21)
 
 
