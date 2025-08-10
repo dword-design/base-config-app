@@ -12,8 +12,8 @@ importers:
         specifier: ^8.0.2
         version: 8.0.2(@netlify/blobs@9.1.2)(@parcel/watcher@2.5.1)(@types/eslint@9.6.1)(@types/node@24.0.15)(@typescript-eslint/parser@8.37.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(@typescript-eslint/utils@8.37.0(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-core@3.5.17)(@vue/compiler-dom@3.5.17)(@vue/compiler-sfc@3.5.17)(db0@0.3.2)(esbuild@0.25.8)(eslint@9.31.0(jiti@2.4.2))(ioredis@5.6.1)(magicast@0.3.5)(meow@13.2.0)(optionator@0.9.4)(postcss@8.5.6)(prettier@3.6.2)(rollup@4.45.1)(tailwindcss@4.1.11)(terser@5.43.1)(tsx@4.20.3)(vite@6.3.5(@types/node@24.0.15)(jiti@2.4.2)(terser@5.43.1)(tsx@4.20.3)(yaml@2.8.0))(vue-eslint-parser@10.2.0(eslint@9.31.0(jiti@2.4.2)))(vue-tsc@2.2.12(typescript@5.8.3))(vue@3.5.17(typescript@5.8.3))(webpack@5.100.1(esbuild@0.25.8))(yaml@2.8.0)
       '@semantic-release/exec':
-        specifier: ^6.0.3
-        version: 6.0.3(semantic-release@22.0.12(typescript@5.8.3))
+        specifier: ^7.0.0
+        version: 7.1.0(semantic-release@22.0.12(typescript@5.8.3))
       ceiling:
         specifier: ^4.0.0
         version: 4.0.0(typescript@5.8.3)
@@ -1739,11 +1739,11 @@ packages:
     resolution: {integrity: sha512-mgdxrHTLOjOddRVYIYDo0fR3/v61GNN1YGkfbrjuIKg/uMgCd+Qzo3UAXJ+woLQQpos4pl5Esuw5A7AoNlzjUQ==}
     engines: {node: '>=18'}
 
-  '@semantic-release/exec@6.0.3':
-    resolution: {integrity: sha512-bxAq8vLOw76aV89vxxICecEa8jfaWwYITw6X74zzlO0mc/Bgieqx9kBRz9z96pHectiTAtsCwsQcUyLYWnp3VQ==}
-    engines: {node: '>=14.17'}
+  '@semantic-release/exec@7.1.0':
+    resolution: {integrity: sha512-4ycZ2atgEUutspPZ2hxO6z8JoQt4+y/kkHvfZ1cZxgl9WKJId1xPj+UadwInj+gMn2Gsv+fLnbrZ4s+6tK2TFQ==}
+    engines: {node: '>=20.8.1'}
     peerDependencies:
-      semantic-release: '>=18.0.0'
+      semantic-release: '>=24.1.0'
 
   '@semantic-release/git@10.0.1':
     resolution: {integrity: sha512-eWrx5KguUcU2wUPaO6sfvZI0wPafUKAMNC18aXY4EnNcrZL86dEmpNVnC9uMpGZkmZJ9EfCVJBQx4pV4EMGT1w==}
@@ -9909,14 +9909,14 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/exec@6.0.3(semantic-release@22.0.12(typescript@5.8.3))':
+  '@semantic-release/exec@7.1.0(semantic-release@22.0.12(typescript@5.8.3))':
     dependencies:
-      '@semantic-release/error': 3.0.0
+      '@semantic-release/error': 4.0.0
       aggregate-error: 3.1.0
       debug: 4.4.1
-      execa: 5.1.1
-      lodash: 4.17.21
-      parse-json: 5.2.0
+      execa: 9.6.0
+      lodash-es: 4.17.21
+      parse-json: 8.3.0
       semantic-release: 22.0.12(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
