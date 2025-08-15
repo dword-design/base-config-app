@@ -1,3 +1,10 @@
+## [7.0.10](https://github.com/dword-design/base-config-app/compare/v7.0.9...v7.0.10) (2025-08-15)
+
+
+### Bug Fixes
+
+* foo ([47006fb](https://github.com/dword-design/base-config-app/commit/47006fb4639886150156ccd063d6f3625441b5d0))
+
 ## [7.0.9](https://github.com/dword-design/base-config-app/compare/v7.0.8...v7.0.9) (2025-08-15)
 
 
