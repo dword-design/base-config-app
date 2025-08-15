@@ -58,7 +58,7 @@ export default function (config) {
       deployPlugins: [
         [
           packageName`@semantic-release/exec`,
-          { publishCmd: `${packageName`pm2`} deploy production` },
+          { publishCmd: `git rev-list @{upstream}.. -n 1 && ${packageName`pm2`} deploy production` },
         ],
       ],
       preDeploySteps: [
