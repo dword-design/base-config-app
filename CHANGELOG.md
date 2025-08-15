@@ -1,3 +1,10 @@
+## [7.0.5](https://github.com/dword-design/base-config-app/compare/v7.0.4...v7.0.5) (2025-08-15)
+
+
+### Bug Fixes
+
+* do not force deployment ([19fbec4](https://github.com/dword-design/base-config-app/commit/19fbec48ea6dc2d01eee21aa19811d3674f9a7f9))
+
 ## [7.0.4](https://github.com/dword-design/base-config-app/compare/v7.0.3...v7.0.4) (2025-07-31)
 
 
