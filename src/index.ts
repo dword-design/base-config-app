@@ -62,6 +62,8 @@ export default function (config) {
            * TODO: For some reason there are unpushed changes in CI before this command, which is why
            * we need --force. The package.json version change and the changelog change should be
            * pushed by @semantic-release/git in prepare phase.
+           * Interestingly I also get "Updates were rejected because the remote contains work that you do
+           * not have locally." when pulling, so something seems to get pushed.
            * Output the unpushed diff commit: Add this in publishCmd here below before the deploy command:
            * git log -p @{upstream}.. --max-count=1 &&
            */
