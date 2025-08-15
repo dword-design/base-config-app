@@ -58,7 +58,7 @@ export default function (config) {
       deployPlugins: [
         [
           packageName`@semantic-release/exec`,
-          { publishCmd: `${packageName`pm2`} deploy production --force` },
+          { publishCmd: `${packageName`pm2`} deploy production` },
         ],
       ],
       preDeploySteps: [
