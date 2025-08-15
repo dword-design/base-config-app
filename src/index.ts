@@ -58,7 +58,9 @@ export default function (config) {
       deployPlugins: [
         [
           packageName`@semantic-release/exec`,
-          { publishCmd: `git log -p @{upstream}.. --max-count=1 && ${packageName`pm2`} deploy production` },
+          {
+            publishCmd: `git log -p @{upstream}.. --max-count=1 && ${packageName`pm2`} deploy production`,
+          },
         ],
       ],
       preDeploySteps: [
