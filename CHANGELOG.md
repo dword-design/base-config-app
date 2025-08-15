@@ -1,3 +1,10 @@
+## [7.0.11](https://github.com/dword-design/base-config-app/compare/v7.0.10...v7.0.11) (2025-08-15)
+
+
+### Bug Fixes
+
+* re-add nvm sourcing ([d652976](https://github.com/dword-design/base-config-app/commit/d6529761ac4934a214f968c8f9d02945fe876e2f))
+
 ## [7.0.10](https://github.com/dword-design/base-config-app/compare/v7.0.9...v7.0.10) (2025-08-15)
 
 
