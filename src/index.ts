@@ -58,9 +58,14 @@ export default function (config) {
       deployPlugins: [
         [
           packageName`@semantic-release/exec`,
-          {
-            publishCmd: `git log -p @{upstream}.. --max-count=1 && ${packageName`pm2`} deploy production`,
-          },
+          /**
+           * TODO: For some reason there are unpushed changes in CI before this command, which is why
+           * we need --force. The package.json version change and the changelog change should be
+           * pushed by @semantic-release/git in prepare phase.
+           * Output the unpushed diff commit: Add this in publishCmd here below before the deploy command:
+           * git log -p @{upstream}.. --max-count=1 &&
+           */
+          { publishCmd: `${packageName`pm2`} deploy production --force` },
         ],
       ],
       preDeploySteps: [
