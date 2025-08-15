@@ -24,7 +24,7 @@ export default (packageConfig, { cwd = '.' } = {}) => {
         exec_mode: 'cluster',
         instances: 'max',
         name: packageName,
-        script: 'npm',
+        script: 'pnpm',
       },
     ],
     deploy: {
@@ -32,7 +32,7 @@ export default (packageConfig, { cwd = '.' } = {}) => {
         host: ['sebastianlandwehr.com'],
         path: `/var/www/${packageName}`,
         'post-deploy':
-          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm prepublishOnly && pm2 startOrReload ecosystem.json',
+          'pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm prepublishOnly && pm2 startOrReload ecosystem.json',
         ...(repositoryUrl && {
           repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
         }),
