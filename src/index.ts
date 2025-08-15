@@ -65,7 +65,9 @@ export default function (config) {
            * Output the unpushed diff commit: Add this in publishCmd here below before the deploy command:
            * git log -p @{upstream}.. --max-count=1 &&
            */
-          { publishCmd: `${packageName`pm2`} deploy production --force` },
+          {
+            publishCmd: `${packageName`pm2`} deploy production --force`
+          },
         ],
       ],
       preDeploySteps: [
