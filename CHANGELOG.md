@@ -1,3 +1,10 @@
+## [7.0.6](https://github.com/dword-design/base-config-app/compare/v7.0.5...v7.0.6) (2025-08-15)
+
+
+### Bug Fixes
+
+* remove nvm sourcing and move npm to pnpm for start command ([b86b67b](https://github.com/dword-design/base-config-app/commit/b86b67ba80a15e34a757c21551282c9dd4b6a899))
+
 ## [7.0.5](https://github.com/dword-design/base-config-app/compare/v7.0.4...v7.0.5) (2025-08-15)
 
 
