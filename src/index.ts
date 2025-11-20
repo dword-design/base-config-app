@@ -39,7 +39,6 @@ export default function (config) {
     ],
     isLockFileFixCommitType: true,
     npmPublish: false,
-    packageConfig: { main: 'dist/index.js' },
     prepare: async () => {
       await baseConfigNuxt.prepare();
       return outputFiles(this.cwd, {
