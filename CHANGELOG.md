@@ -1,3 +1,10 @@
+## [7.0.12](https://github.com/dword-design/base-config-app/compare/v7.0.11...v7.0.12) (2025-11-20)
+
+
+### Bug Fixes
+
+* remove package config since it's inherited ([2767161](https://github.com/dword-design/base-config-app/commit/2767161a3a1b5b7e761eeab223f62ba2a2a53847))
+
 ## [7.0.11](https://github.com/dword-design/base-config-app/compare/v7.0.10...v7.0.11) (2025-08-15)
 
 
