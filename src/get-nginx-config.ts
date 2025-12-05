@@ -1,7 +1,7 @@
 import endent from 'endent';
 import parsePackagejsonName from 'parse-packagejson-name';
 
-export default packageConfig => {
+export default (packageConfig: { name: string }) => {
   const packageName = parsePackagejsonName(packageConfig.name).fullName;
   return endent`
     upstream web {
