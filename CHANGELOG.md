@@ -1,3 +1,20 @@
+# [8.0.0](https://github.com/dword-design/base-config-app/compare/v7.0.12...v8.0.0) (2025-12-05)
+
+
+### Bug Fixes
+
+* drop postcreate.sh ([6fd35ab](https://github.com/dword-design/base-config-app/commit/6fd35ab7268f99e0e16269dfdd677746cf330388))
+* lock file maintenance ([#206](https://github.com/dword-design/base-config-app/issues/206)) ([0281994](https://github.com/dword-design/base-config-app/commit/0281994676cd9a690931d08871a1528e542dbdf9))
+
+
+### BREAKING CHANGES
+
+* node >= 22
+* Upgrade Nuxt to 4
+* Drop @dword-design/nuxt-i18n
+* Drop nuxt-basic-authentication-module
+* Drop vite-svg-loader
+
 ## [7.0.12](https://github.com/dword-design/base-config-app/compare/v7.0.11...v7.0.12) (2025-11-20)
 
 
