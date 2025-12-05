@@ -1,18 +1,21 @@
+import { type Base, type Config, defineBaseConfig } from '@dword-design/base';
 import getBaseConfigNuxt, {
   getEslintConfig,
 } from '@dword-design/base-config-nuxt';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
-import loadPkg from 'load-pkg';
 import outputFiles from 'output-files';
+import { readPackageSync } from 'read-pkg';
 import yaml from 'yaml';
 
 import dockerCompose from './docker-compose';
 import getEcosystemConfig from './get-ecosystem-config';
 import getNginxConfig from './get-nginx-config';
 
-export default function (config) {
-  const packageConfig = loadPkg.sync(this.cwd);
+type ConfigApp = Config & { virtualImports?: string[] };
+
+export default defineBaseConfig(function (this: Base, config: ConfigApp) {
+  const packageConfig = readPackageSync({ cwd: this.cwd });
   const baseConfigNuxt = getBaseConfigNuxt.call(this, config);
   return {
     ...baseConfigNuxt,
@@ -81,7 +84,7 @@ export default function (config) {
       ...baseConfigNuxt.commands,
       pull: {
         arguments: '<endpoint>',
-        handler: endpoint =>
+        handler: (endpoint: string) =>
           execaCommand(`ceiling pull ${endpoint}`, {
             cwd: this.cwd,
             stdio: 'inherit',
@@ -89,7 +92,7 @@ export default function (config) {
       },
       push: {
         arguments: '<endpoint>',
-        handler: endpoint =>
+        handler: (endpoint: string) =>
           execaCommand(`ceiling push ${endpoint}`, {
             cwd: this.cwd,
             stdio: 'inherit',
@@ -104,4 +107,4 @@ export default function (config) {
       },
     },
   };
-}
+});
