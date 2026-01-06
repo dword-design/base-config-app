@@ -1,3 +1,10 @@
+## [8.0.1](https://github.com/dword-design/base-config-app/compare/v8.0.0...v8.0.1) (2026-01-06)
+
+
+### Bug Fixes
+
+* enable job matrix ([d5f53a6](https://github.com/dword-design/base-config-app/commit/d5f53a60a0458fba6bf49235d031f8de7b2013f9))
+
 # [8.0.0](https://github.com/dword-design/base-config-app/compare/v7.0.12...v8.0.0) (2025-12-05)
 
 
