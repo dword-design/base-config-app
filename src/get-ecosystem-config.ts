@@ -32,7 +32,7 @@ export default (packageConfig: { name: string }, { cwd = '.' } = {}) => {
         host: ['sebastianlandwehr.com'],
         path: `/var/www/${packageName}`,
         'post-deploy':
-          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm prepublishOnly && pm2 startOrReload ecosystem.json',
+          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm build && pm2 startOrReload ecosystem.json',
         ...(gitInfo && {
           repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
         }),
