@@ -1,3 +1,10 @@
+## [8.0.2](https://github.com/dword-design/base-config-app/compare/v8.0.1...v8.0.2) (2026-01-07)
+
+
+### Bug Fixes
+
+* use build instead of prepublishOnly when deploying ([b4d768f](https://github.com/dword-design/base-config-app/commit/b4d768f572396b10a93100573cbb726a34a62859))
+
 ## [8.0.1](https://github.com/dword-design/base-config-app/compare/v8.0.0...v8.0.1) (2026-01-06)
 
 
