@@ -76,8 +76,8 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0
       nuxt-dev-ready:
-        specifier: ^5.0.1
-        version: 5.0.1
+        specifier: ^6.0.0
+        version: 6.0.0
       tree-kill-promise:
         specifier: ^4.0.0
         version: 4.0.0
@@ -482,6 +482,10 @@ packages:
 
   '@dword-design/plugin-name-to-package-name@0.1.2':
     resolution: {integrity: sha512-kATg/RzRkq/Yv0qNJziPqwAzKstBTzuXnowH4MvAMyqW6C7o5HlgZtik3GzO0kBKCBZBoRswBSvo9AHclOTxfg==}
+
+  '@dword-design/port-ready-fork@0.0.3':
+    resolution: {integrity: sha512-nhfPIpKKuAmHoiCaezWlijoLee2RPxdzLlgx0zGdEq5LAyPEPcot7qqc0xIkBNIeOmG+1TVJMKvaV9CSFOQOQg==}
+    engines: {node: '>=6'}
 
   '@dword-design/stylelint-config@4.1.0':
     resolution: {integrity: sha512-3n7LpQ1NZTyQT2xVEDFNzuW3xZjOSzRgNfJu5Ua5rVnD8h0pJdqNzToMDBDGiph+kOL8oclrIJnOjsD2Zz50tA==}
@@ -2378,8 +2382,8 @@ packages:
     peerDependencies:
       postcss: ^8.1.0
 
-  axios@1.13.2:
-    resolution: {integrity: sha512-VPk9ebNqPcy5lRGuSlKx752IlDatOjT9paPlm8A7yOuW2Fbvp4X3JznJtT4f0GzGLLiWE9W8onz51SqLYwzGaA==}
+  axios@1.13.5:
+    resolution: {integrity: sha512-cz4ur7Vb0xS4/KUN0tPWe44eqxrIu31me+fbang3ijiNscE129POzipJJA6zniq2C/Z6sJCjMimjS8Lc/GAs8Q==}
 
   b4a@1.7.3:
     resolution: {integrity: sha512-5Q2mfq2WfGuFp3uS//0s6baOJLMoVduPYVeNmDYxu5OUA1/cBfvr2RIS7vi62LdNj/urk1hfmj867I3qt6uZ7Q==}
@@ -5145,9 +5149,9 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  nuxt-dev-ready@5.0.1:
-    resolution: {integrity: sha512-gC4kYDoTqITfpzUXsIj28IPuMXlVDHgn6uaob5Jid0uB8hLg/JDmeA7HkJ8Ayje07wJsP6DtF6yhqRi4YoX5tQ==}
-    engines: {node: '>=20'}
+  nuxt-dev-ready@6.0.0:
+    resolution: {integrity: sha512-yxPli2O9SBHG7/P3GRi1Rfy0oiNYsWFiUT3UiUMXhQnp+xLK6JCEjOhXYDpgQZG2pWhMMLNO2iamx7fQHhlQ9w==}
+    engines: {node: '>=22'}
 
   nuxt@4.2.1:
     resolution: {integrity: sha512-OE5ONizgwkKhjTGlUYB3ksE+2q2/I30QIYFl3N1yYz1r2rwhunGA3puUvqkzXwgLQ3AdsNcigPDmyQsqjbSdoQ==}
@@ -5350,9 +5354,9 @@ packages:
     resolution: {integrity: sha512-raZs7eMN7mRqP2UEaXMSxDAkSqwN41J0yXCV1AVU9PbB4t7aBAj/6nDPgFcUikX+4GeBgXWLxITAn9hr+bdhrg==}
     engines: {node: '>=4'}
 
-  p-wait-for@5.0.2:
-    resolution: {integrity: sha512-lwx6u1CotQYPVju77R+D0vFomni/AqRfqLmqQ8hekklqZ6gAY9rONh7lBQ0uxWMkC2AuX9b2DVAl8To0NyP1JA==}
-    engines: {node: '>=12'}
+  p-wait-for@6.0.0:
+    resolution: {integrity: sha512-2kKzMtjS8TVcpCOU/gr3vZ4K/WIyS1AsEFXFWapM/0lERCdyTbB6ZeuCIp+cL1aeLZfQoMdZFCBTHiK4I9UtOw==}
+    engines: {node: '>=20'}
 
   pac-proxy-agent@7.2.0:
     resolution: {integrity: sha512-TEB8ESquiLMc0lV8vcd5Ql/JAKAoyzHFXaStwjkzpOpC5Yv+pIzLfHvjTSdf3vpa2bMiUQrg9i6276yn8666aA==}
@@ -5563,10 +5567,6 @@ packages:
     resolution: {integrity: sha512-wX1FiFkzuT2H/UUEA8QNXDAA9MMHDsK/3UHj6Dkd5U7kxyigKDA5gyDw78ycTQZAuGCLWyUX5FiXEuVQWafukA==}
     engines: {node: '>=16.0.0'}
     hasBin: true
-
-  port-ready@0.1.0:
-    resolution: {integrity: sha512-6IJ0anhRxATv5dZ5PJgYOwDbl3Jeu2GqnB/gLngC16Mur/4/ELdkIrg3D5RNS9bfek+r10rs3206+Jgv65Z+bw==}
-    engines: {node: '>=6'}
 
   postcss-calc@10.1.1:
     resolution: {integrity: sha512-NYEsLHh8DgG/PRH2+G9BTuUdtf9ViS+vdoQ0YA5OQdGsfN4ztiwtDWNtBl9EKeqNMFnIu8IKZ0cLxEQ5r5KVMw==}
@@ -8133,6 +8133,12 @@ snapshots:
     dependencies:
       is-absolute: 1.0.0
 
+  '@dword-design/port-ready-fork@0.0.3':
+    dependencies:
+      connect-port: 0.0.1
+      p-timeout: 2.0.1
+      p-wait-for: 1.0.0
+
   '@dword-design/stylelint-config@4.1.0(postcss@8.5.6)(prettier@3.7.4)(stylelint@16.26.1(typescript@5.9.3))':
     dependencies:
       depcheck-package-name: 3.0.1
@@ -10188,7 +10194,7 @@ snapshots:
       postcss: 8.5.6
       postcss-value-parser: 4.2.0
 
-  axios@1.13.2:
+  axios@1.13.5:
     dependencies:
       follow-redirects: 1.15.11(debug@4.3.7)
       form-data: 4.0.5
@@ -13030,11 +13036,11 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt-dev-ready@5.0.1:
+  nuxt-dev-ready@6.0.0:
     dependencies:
-      axios: 1.13.2
-      p-wait-for: 5.0.2
-      port-ready: 0.1.0
+      axios: 1.13.5
+      p-wait-for: 6.0.0
+      port-ready: '@dword-design/port-ready-fork@0.0.3'
     transitivePeerDependencies:
       - debug
 
@@ -13386,9 +13392,7 @@ snapshots:
 
   p-wait-for@1.0.0: {}
 
-  p-wait-for@5.0.2:
-    dependencies:
-      p-timeout: 6.1.4
+  p-wait-for@6.0.0: {}
 
   pac-proxy-agent@7.2.0:
     dependencies:
@@ -13628,12 +13632,6 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
-
-  port-ready@0.1.0:
-    dependencies:
-      connect-port: 0.0.1
-      p-timeout: 2.0.1
-      p-wait-for: 1.0.0
 
   postcss-calc@10.1.1(postcss@8.5.6):
     dependencies:
