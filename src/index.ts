@@ -19,13 +19,6 @@ import getNginxConfig from './get-nginx-config';
 type ConfigApp = Config & { virtualImports?: string[] };
 const resolver = createRequire(import.meta.url);
 
-const requirementsYml = fs.readFileSync(
-  resolver.resolve('./requirements.yml'),
-  'utf8',
-);
-
-const playbookYml = fs.readFileSync(resolver.resolve('./playbook.yml'), 'utf8');
-
 export default defineBaseConfig(function (this: Base, config: ConfigApp) {
   const packageConfig = readPackageSync({ cwd: this.cwd });
   const baseConfigNuxt = getBaseConfigNuxt.call(this, config);
@@ -36,16 +29,14 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       'docker-compose.yml',
       'ecosystem.json',
       'nginx',
-      'playbook.yml',
-      'requirements.yml',
+      ...(packageConfig.private ? [] : ['playbook.yml', 'requirements.yml']),
     ],
     editorIgnore: [
       ...baseConfigNuxt.editorIgnore,
       'docker-compose.yml',
       'ecosystem.json',
       'nginx',
-      'playbook.yml',
-      'requirements.yml',
+      ...(packageConfig.private ? [] : ['playbook.yml', 'requirements.yml']),
     ],
     eslintConfig: getEslintConfig({
       ignore: ['ecosystem.json'],
@@ -68,8 +59,18 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
           2,
         ),
         'nginx/default.config': getNginxConfig(packageConfig),
-        'playbook.yml': playbookYml,
-        'requirements.yml': requirementsYml,
+        ...(!packageConfig.private &&
+          (await (async () => {
+            const [playbookYml, requirementsYml] = await Promise.all([
+              fs.readFile(resolver.resolve('./playbook.yml'), 'utf8'),
+              fs.readFile(resolver.resolve('./requirements.yml'), 'utf8'),
+            ]);
+
+            return {
+              'playbook.yml': playbookYml,
+              'requirements.yml': requirementsYml,
+            };
+          })())),
       });
     },
     renovateConfig: { ignorePaths: ['docker-compose.yml'] },
@@ -131,13 +132,6 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
         arguments: '<endpoint>',
         handler: (endpoint: string) =>
           execaCommand(`ceiling push ${endpoint}`, {
-            cwd: this.cwd,
-            stdio: 'inherit',
-          }),
-      },
-      setupDeploy: {
-        handler: () =>
-          execaCommand(`${packageName`pm2`} deploy production setup`, {
             cwd: this.cwd,
             stdio: 'inherit',
           }),
