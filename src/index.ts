@@ -36,6 +36,8 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       'docker-compose.yml',
       'ecosystem.json',
       'nginx',
+      'playbook.yml',
+      'requirements.yml',
     ],
     editorIgnore: [
       ...baseConfigNuxt.editorIgnore,
