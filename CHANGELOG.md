@@ -1,3 +1,10 @@
+## [9.0.3](https://github.com/dword-design/base-config-app/compare/v9.0.2...v9.0.3) (2026-02-25)
+
+
+### Bug Fixes
+
+* do not output stuff if private ([7946495](https://github.com/dword-design/base-config-app/commit/7946495e33add9ac982d90245c2c0903573de309))
+
 ## [9.0.2](https://github.com/dword-design/base-config-app/compare/v9.0.1...v9.0.2) (2026-02-25)
 
 
