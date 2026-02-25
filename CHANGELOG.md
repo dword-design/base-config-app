@@ -1,3 +1,11 @@
+## [9.0.1](https://github.com/dword-design/base-config-app/compare/v9.0.0...v9.0.1) (2026-02-25)
+
+
+### Bug Fixes
+
+* add playbook and requirements to allowed matches ([f737720](https://github.com/dword-design/base-config-app/commit/f73772009177686efa7e4c8d23467c9a66edc2ef))
+* add playbook and requirements to editorignore ([9cf1d07](https://github.com/dword-design/base-config-app/commit/9cf1d076f5c04b9abdbfcf394449dcb14a823b87))
+
 # [9.0.0](https://github.com/dword-design/base-config-app/compare/v8.0.2...v9.0.0) (2026-02-25)
 
 
