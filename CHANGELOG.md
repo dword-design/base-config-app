@@ -1,3 +1,15 @@
+# [9.0.0](https://github.com/dword-design/base-config-app/compare/v8.0.2...v9.0.0) (2026-02-25)
+
+
+### Features
+
+* rolling deployment ([#219](https://github.com/dword-design/base-config-app/issues/219)) ([b9d940f](https://github.com/dword-design/base-config-app/commit/b9d940f032620bc2daa7bbe1136b166833dba3af))
+
+
+### BREAKING CHANGES
+
+* rolling deployment
+
 ## [8.0.2](https://github.com/dword-design/base-config-app/compare/v8.0.1...v8.0.2) (2026-01-07)
 
 
