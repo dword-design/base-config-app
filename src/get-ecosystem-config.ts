@@ -1,44 +1,16 @@
-import pathLib from 'node:path';
-
-import fs from 'fs-extra';
-import hostedGitInfo from 'hosted-git-info';
-import parseGitConfig from 'parse-git-config';
 import parsePackagejsonName from 'parse-packagejson-name';
 
-export default (packageConfig: { name: string }, { cwd = '.' } = {}) => {
-  const repositoryUrl = fs.existsSync(pathLib.join(cwd, '.git'))
-    ? parseGitConfig.sync({ cwd })['remote "origin"']?.url
-    : undefined;
-
-  const gitInfo = hostedGitInfo.fromUrl(repositoryUrl);
-
-  if (repositoryUrl !== undefined && gitInfo?.type !== 'github') {
-    throw new Error('Only GitHub repositories are supported.');
-  }
-
+export default (packageConfig: { name: string }) => {
   const packageName = parsePackagejsonName(packageConfig.name).fullName;
   return {
     apps: [
       {
-        args: 'start',
+        args: '-- node .output/server/index.mjs',
         exec_mode: 'cluster',
         instances: 'max',
         name: packageName,
-        script: 'pnpm',
+        script: 'dotenv-json-extended',
       },
     ],
-    deploy: {
-      production: {
-        host: ['sebastianlandwehr.com'],
-        path: `/var/www/${packageName}`,
-        'post-deploy':
-          'source ~/.nvm/nvm.sh && pnpm install --frozen-lockfile && pnpm checkUnknownFiles && pnpm build && pm2 startOrReload ecosystem.json',
-        ...(gitInfo && {
-          repo: `git@github.com:${gitInfo.user}/${gitInfo.project}.git`,
-        }),
-        ref: 'origin/master',
-        user: 'root',
-      },
-    },
   };
 };

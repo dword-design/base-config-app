@@ -63,7 +63,7 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       return outputFiles(this.cwd, {
         'docker-compose.yml': yaml.stringify(dockerCompose),
         'ecosystem.json': JSON.stringify(
-          getEcosystemConfig(packageConfig, { cwd: this.cwd }),
+          getEcosystemConfig(packageConfig),
           undefined,
           2,
         ),
@@ -82,7 +82,10 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       ],
       preDeploySteps: [
         { name: 'Build project', run: 'pnpm build' },
-        { name: 'Create deploy artifact', run: 'tar -czf deploy.tgz .output' },
+        {
+          name: 'Create deploy artifact',
+          run: 'tar -czf deploy.tgz .output ecosystem.json',
+        },
         {
           name: 'Install Python',
           uses: 'actions/setup-python@v4',
