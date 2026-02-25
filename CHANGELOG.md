@@ -1,3 +1,10 @@
+## [9.0.2](https://github.com/dword-design/base-config-app/compare/v9.0.1...v9.0.2) (2026-02-25)
+
+
+### Bug Fixes
+
+* adjust pm2 ecosystem to rolling deployment ([8beef40](https://github.com/dword-design/base-config-app/commit/8beef4094959a2d417452d1e299a5bc370162b06))
+
 ## [9.0.1](https://github.com/dword-design/base-config-app/compare/v9.0.0...v9.0.1) (2026-02-25)
 
 
