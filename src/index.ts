@@ -1,13 +1,9 @@
-import { createRequire } from 'node:module';
-
 import { type Base, type Config, defineBaseConfig } from '@dword-design/base';
 import getBaseConfigNuxt, {
   getEslintConfig,
 } from '@dword-design/base-config-nuxt';
 import packageName from 'depcheck-package-name';
-import endent from 'endent';
 import { execaCommand } from 'execa';
-import fs from 'fs-extra';
 import outputFiles from 'output-files';
 import { readPackageSync } from 'read-pkg';
 import yaml from 'yaml';
@@ -17,14 +13,6 @@ import getEcosystemConfig from './get-ecosystem-config';
 import getNginxConfig from './get-nginx-config';
 
 type ConfigApp = Config & { virtualImports?: string[] };
-const resolver = createRequire(import.meta.url);
-
-const requirementsYml = fs.readFileSync(
-  resolver.resolve('./requirements.yml'),
-  'utf8',
-);
-
-const playbookYml = fs.readFileSync(resolver.resolve('./playbook.yml'), 'utf8');
 
 export default defineBaseConfig(function (this: Base, config: ConfigApp) {
   const packageConfig = readPackageSync({ cwd: this.cwd });
@@ -64,8 +52,6 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
           2,
         ),
         'nginx/default.config': getNginxConfig(packageConfig),
-        'playbook.yml': playbookYml,
-        'requirements.yml': requirementsYml,
       });
     },
     renovateConfig: { ignorePaths: ['docker-compose.yml'] },
@@ -73,41 +59,24 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       deployPlugins: [
         [
           packageName`@semantic-release/exec`,
-          { publishCmd: 'ansible-playbook playbook.yml -i .inventory' },
+          /**
+           * TODO: For some reason there are unpushed changes in CI before this command, which is why
+           * we need --force. The package.json version change and the changelog change should be
+           * pushed by @semantic-release/git in prepare phase.
+           * Interestingly I also get "Updates were rejected because the remote contains work that you do
+           * not have locally." when pulling, so something seems to get pushed.
+           * Output the unpushed diff commit: Add this in publishCmd here below before the deploy command:
+           * git log -p @{upstream}.. --max-count=1 &&
+           */
+          { publishCmd: `${packageName`pm2`} deploy production --force` },
         ],
       ],
       preDeploySteps: [
-        { name: 'Build project', run: 'pnpm build' },
-        { name: 'Create deploy artifact', run: 'tar -czf deploy.tgz .output' },
-        {
-          name: 'Install Python',
-          uses: 'actions/setup-python@v4',
-          with: { 'python-version': '3.x' },
-        },
-        {
-          name: 'Install ansible',
-          run: endent`
-            python -m pip install --upgrade pip
-            pip install ansible
-          `,
-        },
-        {
-          name: 'Install requirements',
-          run: 'ansible-galaxy install -r requirements.yml',
-        },
         {
           uses: 'webfactory/ssh-agent@v0.5.1',
           with: { 'ssh-private-key': '${{ secrets.SSH_PRIVATE_KEY }}' },
         },
         { run: 'ssh-keyscan -H sebastianlandwehr.com >> ~/.ssh/known_hosts' },
-        {
-          run: endent`
-            cat <<EOF > .inventory
-            [servers]
-            sebastianlandwehr.com ansible_user=\${{ secrets.SSH_USER }} ansible_become=True
-            EOF
-          `,
-        },
       ],
     }),
     commands: {
