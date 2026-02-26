@@ -1,3 +1,10 @@
+## [9.0.4](https://github.com/dword-design/base-config-app/compare/v9.0.3...v9.0.4) (2026-02-26)
+
+
+### Bug Fixes
+
+* fix playbook syntax ([e63cee9](https://github.com/dword-design/base-config-app/commit/e63cee9fb4609d39e3ffa41f9cb437bdbe81a1e7))
+
 ## [9.0.3](https://github.com/dword-design/base-config-app/compare/v9.0.2...v9.0.3) (2026-02-25)
 
 
