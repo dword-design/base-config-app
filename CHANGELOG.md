@@ -1,3 +1,10 @@
+## [9.0.6](https://github.com/dword-design/base-config-app/compare/v9.0.5...v9.0.6) (2026-02-26)
+
+
+### Bug Fixes
+
+* fix var name ([13f3b54](https://github.com/dword-design/base-config-app/commit/13f3b545a614572003086df13ca4d1151c468d0f))
+
 ## [9.0.5](https://github.com/dword-design/base-config-app/compare/v9.0.4...v9.0.5) (2026-02-26)
 
 
