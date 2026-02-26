@@ -26,7 +26,7 @@
     - name: Upload artifact to server
       ansible.builtin.copy:
         src: "{{ artifact_local_path }}"
-        dest: "/tmp/{{ app_name }}-{{ dh.release }}.tgz"
+        dest: "/tmp/{{ app_name }}-{{ dh.new_release }}.tgz"
         mode: "0644"
 
     - name: Ensure new release directory exists
@@ -37,7 +37,7 @@
 
     - name: Extract artifact into new release path
       ansible.builtin.unarchive:
-        src: "/tmp/{{ app_name }}-{{ dh.release }}.tgz"
+        src: "/tmp/{{ app_name }}-{{ dh.new_release }}.tgz"
         dest: "{{ dh.new_release_path }}"
         remote_src: true
 
@@ -72,7 +72,7 @@
     - name: "Finalize: switch current -> new release (atomic)"
       community.general.deploy_helper:
         path: "{{ deploy_to }}"
-        release: "{{ dh.release }}"
+        release: "{{ dh.new_release }}"
         state: finalize
 
     - name: Restart app
