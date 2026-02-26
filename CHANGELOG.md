@@ -1,3 +1,11 @@
+## [9.0.7](https://github.com/dword-design/base-config-app/compare/v9.0.6...v9.0.7) (2026-02-26)
+
+
+### Bug Fixes
+
+* fix playbook ([245c0cd](https://github.com/dword-design/base-config-app/commit/245c0cd173a4259b80968fff8a8965905877d525))
+* push env schema to server if it exists ([8abd628](https://github.com/dword-design/base-config-app/commit/8abd628a58f7baa312300e22d1cb2f3343e823a4))
+
 ## [9.0.6](https://github.com/dword-design/base-config-app/compare/v9.0.5...v9.0.6) (2026-02-26)
 
 
