@@ -1,4 +1,5 @@
 import { createRequire } from 'node:module';
+import pathLib from 'node:path';
 
 import { type Base, type Config, defineBaseConfig } from '@dword-design/base';
 import getBaseConfigNuxt, {
@@ -85,7 +86,7 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
         { name: 'Build project', run: 'pnpm build' },
         {
           name: 'Create deploy artifact',
-          run: 'tar -czf deploy.tgz .output ecosystem.json',
+          run: `tar -czf deploy.tgz .output${fs.existsSync(pathLib.join(this.cwd, '.env.schema.json')) ? ' .env.schema.json' : ''} ecosystem.json`,
         },
         {
           name: 'Install Python',
