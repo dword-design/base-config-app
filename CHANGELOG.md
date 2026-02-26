@@ -1,3 +1,10 @@
+## [9.0.5](https://github.com/dword-design/base-config-app/compare/v9.0.4...v9.0.5) (2026-02-26)
+
+
+### Bug Fixes
+
+* fix servers ([58f0749](https://github.com/dword-design/base-config-app/commit/58f0749298c90af2da725b44223be48e1a259746))
+
 ## [9.0.4](https://github.com/dword-design/base-config-app/compare/v9.0.3...v9.0.4) (2026-02-26)
 
 
