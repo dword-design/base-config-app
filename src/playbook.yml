@@ -19,38 +19,35 @@
     - name: Prepare deploy folder layout and compute new release path
       community.general.deploy_helper:
         path: "{{ deploy_to }}"
-        release: "{{ release_id | default(ansible_date_time.iso8601_basic_short) }}"
-        state: present
-      register: dh
 
     - name: Upload artifact to server
       ansible.builtin.copy:
         src: "{{ artifact_local_path }}"
-        dest: "/tmp/{{ app_name }}-{{ dh.new_release }}.tgz"
+        dest: "/tmp/{{ app_name }}-{{ deploy_helper.new_release }}.tgz"
         mode: "0644"
 
     - name: Ensure new release directory exists
       ansible.builtin.file:
-        path: "{{ dh.new_release_path }}"
+        path: "{{ deploy_helper.new_release_path }}"
         state: directory
         mode: "0755"
 
     - name: Extract artifact into new release path
       ansible.builtin.unarchive:
-        src: "/tmp/{{ app_name }}-{{ dh.new_release }}.tgz"
-        dest: "{{ dh.new_release_path }}"
+        src: "/tmp/{{ app_name }}-{{ deploy_helper.new_release }}.tgz"
+        dest: "{{ deploy_helper.new_release_path }}"
         remote_src: true
 
     # --- AUTO-LINK: link all direct children of shared/ into the release root ---
     - name: Ensure shared directory exists
       ansible.builtin.file:
-        path: "{{ deploy_to }}/shared"
+        path: "{{ deploy_helper.shared_path }}"
         state: directory
         mode: "0755"
 
     - name: List all items in shared/ (including dotfiles)
       ansible.builtin.find:
-        paths: "{{ deploy_to }}/shared"
+        paths: "{{ deploy_helper.shared_path }}"
         file_type: any
         hidden: true
         recurse: false
@@ -59,28 +56,31 @@
     - name: Symlink all shared items into the new release (same name)
       ansible.builtin.file:
         src: "{{ item.path }}"
-        dest: "{{ dh.new_release_path }}/{{ item.path | basename }}"
+        dest: "{{ deploy_helper.new_release_path }}/{{ item.path | basename }}"
         state: link
         force: true
       loop: "{{ shared_items.files }}"
 
     # Optional server-side steps go here (migrations, perms, etc.)
     # - name: Run migrations
-    #   ansible.builtin.command: "{{ dh.new_release_path }}/bin/migrate"
+    #   ansible.builtin.command: "{{ deploy_helper.new_release_path }}/bin/migrate"
     #   changed_when: true
 
     - name: "Finalize: switch current -> new release (atomic)"
       community.general.deploy_helper:
         path: "{{ deploy_to }}"
-        release: "{{ dh.new_release }}"
+        release: "{{ deploy_helper.new_release }}"
         state: finalize
 
     - name: Restart app
-      ansible.builtin.command: "pm2 startOrReload ecosystem.json"
+      ansible.builtin.shell: source ~/.nvm/nvm.sh && pm2 startOrReload ecosystem.json
+      args:
+        chdir: "{{ deploy_helper.new_release_path }}"
+        executable: /bin/bash
       changed_when: true
 
     - name: Cleanup old releases
       community.general.deploy_helper:
         path: "{{ deploy_to }}"
         keep_releases: 5
-        state: cleanup
+        state: clean
