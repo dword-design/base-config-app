@@ -1,3 +1,10 @@
+## [9.0.9](https://github.com/dword-design/base-config-app/compare/v9.0.8...v9.0.9) (2026-03-26)
+
+
+### Bug Fixes
+
+* ignore requirements.yml for renovate ([3bde9bd](https://github.com/dword-design/base-config-app/commit/3bde9bdc16e6d4c0749c2154829e5fd6624f7f86))
+
 ## [9.0.8](https://github.com/dword-design/base-config-app/compare/v9.0.7...v9.0.8) (2026-02-28)
 
 
