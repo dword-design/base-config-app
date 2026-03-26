@@ -74,7 +74,7 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
           })())),
       });
     },
-    renovateConfig: { ignorePaths: ['docker-compose.yml'] },
+    renovateConfig: { ignorePaths: ['docker-compose.yml', 'requirements.yml'] },
     ...(!packageConfig.private && {
       deployPlugins: [
         [
