@@ -9,6 +9,8 @@ export default (packageConfig: { name: string }) => {
       {
         exec_mode: 'cluster',
         instances: 'max',
+        kill_timeout: 10_000,
+        listen_timeout: 20_000,
         name: packageName,
         script: './prod-entry.mjs',
       },
