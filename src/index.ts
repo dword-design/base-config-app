@@ -7,7 +7,6 @@ import getBaseConfigNuxt, {
 } from '@dword-design/base-config-nuxt';
 import packageName from 'depcheck-package-name';
 import endent from 'endent';
-import { execaCommand } from 'execa';
 import fs from 'fs-extra';
 import outputFiles from 'output-files';
 import { readPackageSync } from 'read-pkg';
@@ -45,11 +44,7 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       ignore: ['ecosystem.json', 'prod-entry.mjs'],
       virtualImports: config.virtualImports,
     }),
-    gitignore: [
-      ...baseConfigNuxt.gitignore,
-      '/.ceilingrc.json',
-      '/nginx/default.config',
-    ],
+    gitignore: [...baseConfigNuxt.gitignore, '/nginx/default.config'],
     isLockFileFixCommitType: true,
     npmPublish: false,
     prepare: async () => {
@@ -134,24 +129,5 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
         },
       ],
     }),
-    commands: {
-      ...baseConfigNuxt.commands,
-      pull: {
-        arguments: '<endpoint>',
-        handler: (endpoint: string) =>
-          execaCommand(`ceiling pull ${endpoint}`, {
-            cwd: this.cwd,
-            stdio: 'inherit',
-          }),
-      },
-      push: {
-        arguments: '<endpoint>',
-        handler: (endpoint: string) =>
-          execaCommand(`ceiling push ${endpoint}`, {
-            cwd: this.cwd,
-            stdio: 'inherit',
-          }),
-      },
-    },
   };
 });
