@@ -1,3 +1,12 @@
+## [9.0.10](https://github.com/dword-design/base-config-app/compare/v9.0.9...v9.0.10) (2026-05-27)
+
+
+### Bug Fixes
+
+* fix prod downtime ([22f124a](https://github.com/dword-design/base-config-app/commit/22f124a945770fe66fdde09066716ea489dc1d87))
+* set pm2 timeouts ([2021780](https://github.com/dword-design/base-config-app/commit/20217802043a22a23a59bc776386ccc7ea008734))
+* upgrade base ([eff47f3](https://github.com/dword-design/base-config-app/commit/eff47f342b87518f087b4727ec648124a1a8840d))
+
 ## [9.0.9](https://github.com/dword-design/base-config-app/compare/v9.0.8...v9.0.9) (2026-03-26)
 
 
