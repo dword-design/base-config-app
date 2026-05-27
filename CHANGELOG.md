@@ -1,3 +1,10 @@
+## [9.0.13](https://github.com/dword-design/base-config-app/compare/v9.0.12...v9.0.13) (2026-05-27)
+
+
+### Bug Fixes
+
+* set cwd to current ([53f791c](https://github.com/dword-design/base-config-app/commit/53f791c8c8b0b9b7d07794c9cdf4f77cf503e025))
+
 ## [9.0.12](https://github.com/dword-design/base-config-app/compare/v9.0.11...v9.0.12) (2026-05-27)
 
 
