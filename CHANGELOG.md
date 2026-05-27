@@ -1,3 +1,10 @@
+## [9.0.15](https://github.com/dword-design/base-config-app/compare/v9.0.14...v9.0.15) (2026-05-27)
+
+
+### Bug Fixes
+
+* foo ([6bad9f4](https://github.com/dword-design/base-config-app/commit/6bad9f40e7babf324d47653da23aad1cd9facda5))
+
 ## [9.0.14](https://github.com/dword-design/base-config-app/compare/v9.0.13...v9.0.14) (2026-05-27)
 
 
