@@ -7,11 +7,10 @@ export default (packageConfig: { name: string }) => {
   return {
     apps: [
       {
-        args: '-- node .output/server/index.mjs',
         exec_mode: 'cluster',
         instances: 'max',
         name: packageName,
-        script: 'dotenv-json-extended',
+        script: './prod-entry.mjs',
       },
     ],
   };

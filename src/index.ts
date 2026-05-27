@@ -30,6 +30,7 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       'docker-compose.yml',
       'ecosystem.json',
       'nginx',
+      'prod-entry.mjs',
       ...(packageConfig.private ? [] : ['playbook.yml', 'requirements.yml']),
     ],
     editorIgnore: [
@@ -37,10 +38,11 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       'docker-compose.yml',
       'ecosystem.json',
       'nginx',
+      'prod-entry.mjs',
       ...(packageConfig.private ? [] : ['playbook.yml', 'requirements.yml']),
     ],
     eslintConfig: getEslintConfig({
-      ignore: ['ecosystem.json'],
+      ignore: ['ecosystem.json', 'prod-entry.mjs'],
       virtualImports: config.virtualImports,
     }),
     gitignore: [
@@ -54,12 +56,25 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
       await baseConfigNuxt.prepare();
       return outputFiles(this.cwd, {
         'docker-compose.yml': yaml.stringify(dockerCompose),
-        'ecosystem.json': JSON.stringify(
+        'ecosystem.json': `${JSON.stringify(
           getEcosystemConfig(packageConfig),
           undefined,
           2,
-        ),
+        )}\n`,
         'nginx/default.config': getNginxConfig(packageConfig),
+        'prod-entry.mjs': endent`
+          import { exec } from 'node:child_process';
+          import { promisify } from 'node:util';
+
+          const execAsync = promisify(exec);
+
+          const { stdout: envVariablesString } = await execAsync('dotenv-json-extended get');
+          const envVariables = JSON.parse(envVariablesString);
+
+          Object.assign(process.env, envVariables);
+
+          await import('./.output/server/index.mjs');
+        `,
         ...(!packageConfig.private &&
           (await (async () => {
             const [playbookYml, requirementsYml] = await Promise.all([
@@ -86,7 +101,7 @@ export default defineBaseConfig(function (this: Base, config: ConfigApp) {
         { name: 'Build project', run: 'pnpm build' },
         {
           name: 'Create deploy artifact',
-          run: `tar -czf deploy.tgz .output${fs.existsSync(pathLib.join(this.cwd, '.env.schema.json')) ? ' .env.schema.json' : ''} ecosystem.json`,
+          run: `tar -czf deploy.tgz .output${fs.existsSync(pathLib.join(this.cwd, '.env.schema.json')) ? ' .env.schema.json' : ''} ecosystem.json prod-entry.mjs`,
         },
         {
           name: 'Install Python',
