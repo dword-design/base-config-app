@@ -7,6 +7,7 @@ export default (packageConfig: { name: string }) => {
   return {
     apps: [
       {
+        cwd: `/var/www/${packageName}/current`,
         exec_mode: 'cluster',
         instances: 'max',
         kill_timeout: 10_000,
