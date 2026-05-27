@@ -1,3 +1,10 @@
+## [9.0.12](https://github.com/dword-design/base-config-app/compare/v9.0.11...v9.0.12) (2026-05-27)
+
+
+### Bug Fixes
+
+* pm2 save ([04ca79c](https://github.com/dword-design/base-config-app/commit/04ca79c325a481dbd1a891368a26f5f842305bdb))
+
 ## [9.0.11](https://github.com/dword-design/base-config-app/compare/v9.0.10...v9.0.11) (2026-05-27)
 
 
