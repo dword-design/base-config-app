@@ -1,3 +1,10 @@
+## [9.0.11](https://github.com/dword-design/base-config-app/compare/v9.0.10...v9.0.11) (2026-05-27)
+
+
+### Bug Fixes
+
+* remove ceiling dep ([aa7da8e](https://github.com/dword-design/base-config-app/commit/aa7da8ee1bcb3d9704c840b1b948159dd88e54e8))
+
 ## [9.0.10](https://github.com/dword-design/base-config-app/compare/v9.0.9...v9.0.10) (2026-05-27)
 
 
