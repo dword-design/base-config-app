@@ -73,7 +73,7 @@
         state: finalize
 
     - name: Restart app
-      ansible.builtin.shell: source ~/.nvm/nvm.sh && pm2 startOrReload ecosystem.json && pm2 save
+      ansible.builtin.shell: source ~/.nvm/nvm.sh && pm2 startOrReload ecosystem.json
       args:
         chdir: "{{ deploy_helper.new_release_path }}"
         executable: /bin/bash
