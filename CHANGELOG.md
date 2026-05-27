@@ -1,3 +1,10 @@
+## [9.0.14](https://github.com/dword-design/base-config-app/compare/v9.0.13...v9.0.14) (2026-05-27)
+
+
+### Reverts
+
+* Revert "fix: pm2 save" ([b03a4a7](https://github.com/dword-design/base-config-app/commit/b03a4a791c338153a20ca7b92e814d16cfc85c86))
+
 ## [9.0.13](https://github.com/dword-design/base-config-app/compare/v9.0.12...v9.0.13) (2026-05-27)
 
 
