@@ -11,7 +11,7 @@ export default {
     web: {
       command: 'bash -c "pnpm install --frozen-lockfile && pnpm dev"',
       environment: ['HOST=0.0.0.0'],
-      image: `node:${nodejsVersion`22`}`,
+      image: `node:${nodejsVersion`24`}`,
       ports: ['3000:3000'],
       volumes: ['.:/app', '/app/node_modules'],
       working_dir: '/app',
